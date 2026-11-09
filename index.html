@@ -8,1010 +8,1105 @@
 <title>MTs Al-Fikr Cianjur Singkut</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --hijau:#075638;
-  --hijau-tua:#043d29;
-  --hijau-muda:#138451;
-  --emas:#d8b451;
-  --emas-muda:#f3dfa0;
-  --putih:#fff;
-  --teks:#26382f;
-  --abu:#64746b;
-  --latar:#f5f9f6;
-  --garis:#e3ece5;
-  --bayangan:0 10px 30px rgba(0,50,30,.09);
+--green:#075638;
+--green2:#0b7048;
+--deep:#043c29;
+--gold:#d7ad52;
+--cream:#fbf8ef;
+--ink:#18352a;
+--muted:#65776e;
+--line:#e5eadf;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{font-family:'Poppins',Arial,sans-serif;color:var(--teks);background:var(--latar);line-height:1.7}
-a{text-decoration:none}
-button,input,textarea,select{font:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:#f7f9f5;line-height:1.65}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
 button{cursor:pointer}
-header{
- position:relative;overflow:hidden;background:
- radial-gradient(circle at 90% 20%,rgba(255,255,255,.10),transparent 25%),
- linear-gradient(115deg,var(--hijau-tua),var(--hijau),#087044);
- color:white;padding:20px 7%;display:flex;align-items:center;gap:17px;
- border-bottom:4px solid var(--emas)
-}
-header::after{content:"";position:absolute;width:220px;height:220px;right:8%;top:-145px;border:1px solid rgba(255,255,255,.13);transform:rotate(45deg)}
-.logo{flex-shrink:0;width:78px;height:78px;border:3px solid var(--emas);border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:5px;box-shadow:0 5px 15px rgba(0,0,0,.18)}
-.logo img{width:100%;height:100%;object-fit:contain}
-.header-text{position:relative;z-index:1}
-.header-text h2{font-size:22px;font-weight:800;letter-spacing:.5px;line-height:1.4}
-.header-text p{font-size:12px;color:var(--emas-muda);letter-spacing:1.2px;font-weight:500}
-nav{position:sticky;top:0;z-index:1000;background:rgba(4,61,41,.97);backdrop-filter:blur(10px);padding:0 5%;display:flex;align-items:center;justify-content:center;gap:3px;flex-wrap:wrap;box-shadow:0 4px 15px rgba(0,0,0,.12)}
-nav a{color:white;padding:14px 10px;font-size:11px;font-weight:600;transition:.25s;border-bottom:3px solid transparent}
-nav a:hover{color:var(--emas-muda);background:rgba(255,255,255,.07);border-bottom-color:var(--emas)}
-.hero{position:relative;overflow:hidden;min-height:440px;padding:90px 8%;color:white;background:radial-gradient(circle at 85% 30%,rgba(231,190,89,.18),transparent 25%),radial-gradient(circle at 10% 90%,rgba(255,255,255,.09),transparent 28%),linear-gradient(120deg,#043d29,#087447 60%,#15915b)}
-.hero::before,.hero::after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(255,255,255,.12);transform:rotate(45deg)}
-.hero::before{right:-90px;top:30px}.hero::after{right:70px;bottom:-190px}
-.hero-content{position:relative;z-index:2;max-width:760px}
-.hero small{display:inline-block;color:var(--emas-muda);font-weight:700;letter-spacing:2px;font-size:12px;padding:7px 13px;border:1px solid rgba(243,223,160,.45);border-radius:30px;background:rgba(255,255,255,.07)}
-.hero h1{font-size:43px;max-width:700px;line-height:1.25;margin:22px 0 15px;font-weight:800}
-.hero p{max-width:620px;color:#eef8f0;font-size:15px;margin-bottom:28px}
-.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;border:0;background:linear-gradient(135deg,#f1d17c,#d5ad45);color:#263b2d;padding:11px 21px;border-radius:8px;font-size:13px;font-weight:700;box-shadow:0 5px 15px rgba(0,0,0,.13);transition:.25s}
+.container{width:min(1160px,92%);margin:auto}
+
+.topline{background:var(--deep);color:#e9f4ec;font-size:12px;padding:8px 0}
+.topline .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);box-shadow:0 5px 22px #123b2110}
+.head{display:flex;align-items:center;gap:15px;padding:12px 0}
+.logo{width:66px;height:66px;object-fit:contain;flex:none}
+.brand strong{display:block;color:var(--green);font-size:clamp(16px,2vw,23px);line-height:1.25;font-weight:800}
+.brand span{font-size:12px;color:var(--muted)}
+
+.navwrap{border-top:1px solid #edf0e9}
+nav{display:flex;align-items:center;gap:5px;overflow-x:auto;padding:8px 0}
+nav a,nav button{white-space:nowrap;border:0;background:none;padding:9px 12px;border-radius:9px;font-size:13px;font-weight:700;color:#355747}
+nav a:hover,nav button:hover{background:#eaf4ec;color:var(--green)}
+nav .admin-link{margin-left:auto;background:var(--green);color:white}
+
+.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#043d29 0%,#08714a 58%,#b28a3d 140%);color:white;padding:82px 0 76px}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff20;border-radius:50%;width:440px;height:440px;right:-120px;top:-230px}
+.hero:after{width:300px;height:300px;right:100px;top:auto;bottom:-220px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr .6fr;align-items:center;gap:35px}
+.eyebrow{display:inline-block;color:#f2d58d;font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(34px,5vw,58px);line-height:1.12;max-width:750px;margin-bottom:18px}
+.hero p{max-width:690px;color:#e4f2e9;font-size:16px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 21px;font-weight:800;font-size:13px;transition:.2s}
 .btn:hover{transform:translateY(-2px)}
-.btn-outline{background:transparent;color:white;border:1px solid rgba(255,255,255,.65);box-shadow:none}
-.highlight{position:relative;z-index:5;max-width:1100px;margin:-35px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.highlight-item{background:white;padding:20px 15px;border-radius:12px;text-align:center;box-shadow:var(--bayangan);border-bottom:3px solid var(--emas)}
-.highlight-item strong{display:block;color:var(--hijau);font-size:23px;font-weight:800}
-.highlight-item span{color:var(--abu);font-size:12px;font-weight:600}
-section{padding:65px 7%}
-.about{background:radial-gradient(circle at 5% 10%,rgba(216,180,81,.08),transparent 25%),linear-gradient(135deg,#edf6ef,#f8fbf8)}
-.section-title{text-align:center;margin-bottom:35px}
-.section-title small{color:#a27b23;letter-spacing:2px;font-size:11px;font-weight:700}
-.section-title h2{color:var(--hijau);font-size:29px;font-weight:800;margin:5px 0}
-.section-title p{color:var(--abu);font-size:13px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.card{position:relative;background:white;padding:25px;border-radius:13px;box-shadow:var(--bayangan);border:1px solid var(--garis);border-bottom:4px solid var(--emas);transition:.25s;min-width:0}
-.card:hover{transform:translateY(-3px)}
-.card h3{color:var(--hijau);font-size:17px;margin-bottom:10px}
-.card p{color:#53665b;font-size:13px;line-height:1.9;margin-bottom:7px;overflow-wrap:anywhere}
-.card-icon{width:45px;height:45px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#e2f1e6,#fff4d7);color:var(--hijau);font-size:21px;margin-bottom:16px}
-.profile-card{max-width:950px;margin:auto}
-.profile-label{display:inline-block;margin-top:14px;padding:5px 12px;color:#725719;background:#fff5d9;border-radius:30px;font-size:11px;font-weight:700}
-.ppdb-box{max-width:850px;margin:auto;text-align:center;background:linear-gradient(120deg,#075638,#11804d);color:white;padding:40px 25px;border-radius:17px;border:2px solid var(--emas);box-shadow:var(--bayangan)}
-.ppdb-box h3{font-size:23px;margin-bottom:10px}
-.ppdb-box p{font-size:13px;color:#e9f4ec;margin-bottom:20px}
-.contact-card{max-width:850px;margin:auto}
-.contact-card p{padding:7px 0}
-.foundation-link{text-align:center;padding:25px 15px;background:#fff9e9;border-top:1px solid #efdfb2}
-.foundation-link p{color:#675b3c;font-size:12px;margin-bottom:8px}
-.foundation-link a{color:var(--hijau);font-weight:700;font-size:13px}
-footer{background:radial-gradient(circle at 90% 0%,rgba(255,255,255,.08),transparent 25%),linear-gradient(120deg,#043d29,#075638);color:white;text-align:center;padding:30px 15px;border-top:4px solid var(--emas)}
-footer p{font-size:12px;margin:4px 0;color:#e1eee5}
-footer strong{color:var(--emas-muda)}
-.item-image{width:100%;height:190px;object-fit:cover;border-radius:9px;margin-bottom:13px;background:#edf4ef}
-.empty-state{text-align:center;padding:30px 15px;border:2px dashed #c9d9ce;border-radius:13px;background:rgba(255,255,255,.7);color:var(--abu);font-size:13px}
-.empty-state .card-icon{margin:0 auto 12px}
-.date-text{font-size:11px!important;color:#8b968e!important}
-.content-detail{white-space:pre-wrap}
-.comment-box{max-width:850px;margin:auto}
-.comment-form{display:grid;gap:12px;margin:18px 0 25px}
-.field{display:grid;gap:5px}
-.field label{font-size:12px;font-weight:700;color:var(--hijau)}
-.field input,.field textarea,.field select{width:100%;padding:11px 12px;border:1px solid #cbdacf;border-radius:8px;background:white;color:var(--teks);font-size:13px;outline:none}
-.field input:focus,.field textarea:focus{border-color:var(--hijau-muda);box-shadow:0 0 0 3px rgba(19,132,81,.1)}
-.field textarea{min-height:100px;resize:vertical}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.check-line{display:flex;align-items:center;gap:8px;font-size:12px}
-.check-line input{width:auto}
-.action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.small-btn{border:0;padding:7px 11px;border-radius:6px;font-size:11px;font-weight:700;background:#e8f2eb;color:var(--hijau)}
-.small-btn.danger{background:#ffebeb;color:#a12a2a}
-.small-btn.gold{background:#fff3d4;color:#745718}
-.admin-area{display:none;background:#edf5ef;border-top:3px solid var(--emas)}
-.admin-box{max-width:1100px;margin:auto}
-.admin-login,.admin-dashboard{background:white;border:1px solid var(--garis);border-radius:13px;padding:25px;box-shadow:var(--bayangan)}
-.admin-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}
-.admin-tabs button{border:1px solid #cbdacf;background:#f5faf6;padding:9px 13px;border-radius:7px;color:var(--hijau);font-size:12px;font-weight:700}
-.admin-tabs button.active{background:var(--hijau);color:white}
-.admin-panel{display:none}
-.admin-panel.active{display:block}
-.admin-list{display:grid;gap:10px;margin-top:18px}
-.admin-list-item{padding:13px;border:1px solid var(--garis);border-radius:9px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
-.admin-list-item strong{color:var(--hijau);font-size:13px}
-.admin-list-item small{display:block;color:var(--abu);font-size:11px}
-.notice{padding:11px 13px;border-radius:8px;font-size:12px;margin:12px 0;display:none}
-.notice.error{display:block;background:#fff0f0;color:#a12a2a}
-.notice.success{display:block;background:#eaf7ed;color:#17633b}
-.signed-in{font-size:12px;color:var(--abu);margin-bottom:12px}
-#topButton{position:fixed;right:20px;bottom:20px;width:43px;height:43px;border:0;border-radius:50%;background:var(--emas);color:var(--hijau-tua);font-size:20px;font-weight:bold;display:none;z-index:999;box-shadow:0 4px 15px rgba(0,0,0,.2)}
-@media(max-width:700px){
- header{padding:16px 5%;gap:12px}.logo{width:65px;height:65px}
- .header-text h2{font-size:16px}.header-text p{font-size:9px;letter-spacing:.4px}
- nav{justify-content:flex-start;gap:0;padding:5px 3%}nav a{padding:10px 8px;font-size:10px}
- .hero{min-height:390px;padding:65px 7%}.hero h1{font-size:32px}.hero p{font-size:13px}
- .highlight{grid-template-columns:1fr;margin:-20px 15px 0;padding:0;gap:10px}
- .highlight-item{padding:13px}.highlight-item strong{font-size:20px}
- section{padding:48px 6%}.section-title h2{font-size:24px}
- .cards{grid-template-columns:1fr}.card{padding:22px}.ppdb-box h3{font-size:20px}
- .form-grid{grid-template-columns:1fr}
+.btn-gold{background:var(--gold);color:#263b25}
+.btn-outline{border:1px solid #ffffff80;color:white;background:#ffffff0d}
+.hero-seal{width:min(260px,100%);aspect-ratio:1;border-radius:50%;margin:auto;display:grid;place-items:center;background:radial-gradient(circle,#ffffff20 0 48%,#ffffff0b 49% 100%);border:1px solid #ffffff50;padding:22px}
+.hero-seal img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 20px #001e1460)}
+
+.stats{position:relative;margin-top:-25px;z-index:2}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);background:white;border-radius:18px;box-shadow:0 15px 40px #123b2112;overflow:hidden}
+.stat{padding:22px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{display:block;color:var(--green);font-size:25px;font-weight:800}
+.stat span{font-size:12px;color:var(--muted);font-weight:700}
+
+section{padding:70px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 34px}
+.kicker{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a27a2d;font-weight:800}
+.section-head h2{font-family:"Playfair Display",serif;font-size:clamp(27px,4vw,38px);color:var(--green);line-height:1.2;margin:8px 0 12px}
+.section-head p{color:var(--muted);font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-art{min-height:310px;border-radius:24px;background:linear-gradient(145deg,#e6f1e6,#f8efd9);display:grid;place-items:center;padding:30px;position:relative;overflow:hidden}
+.about-art:before{content:"";position:absolute;width:260px;height:260px;border:1px solid #0b704833;transform:rotate(45deg);border-radius:28px}
+.about-art img{width:min(210px,75%);height:210px;object-fit:contain;position:relative}
+.about-copy h3{font-family:"Playfair Display",serif;font-size:28px;color:var(--green);margin-bottom:13px}
+.about-copy p{color:#5d7066;font-size:14px;margin-bottom:12px}
+.values{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.values span{background:#e9f3e9;color:var(--green);border-radius:30px;padding:8px 13px;font-size:12px;font-weight:800}
+.soft{background:var(--cream)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid #e8eee6;border-radius:17px;padding:22px;box-shadow:0 8px 24px #123b2108}
+.card h3{font-size:17px;color:var(--green);margin:7px 0}
+.card p{font-size:13px;color:var(--muted)}
+.card-icon{width:43px;height:43px;display:grid;place-items:center;background:#eaf4eb;color:var(--green);border-radius:13px;font-size:21px}
+.content-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.content-card{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.content-card img{width:100%;height:180px;object-fit:cover;background:#e8eee8}
+.content-body{padding:18px}
+.content-body small{color:#9b772f;font-weight:800;font-size:11px}
+.content-body h3{color:var(--green);font-size:17px;margin:6px 0}
+.content-body p{font-size:13px;color:var(--muted)}
+.empty{padding:25px;background:white;border:1px dashed #cbd8cb;border-radius:15px;color:var(--muted);text-align:center;font-size:13px;grid-column:1/-1}
+.teacher-card{text-align:center}
+.teacher-card img{width:100px;height:100px;border-radius:50%;object-fit:cover;background:#e8eee8;margin:0 auto 10px;display:block}
+.teacher-card h3{font-size:15px}
+.teacher-card p{font-size:12px}
+.ppdb{background:linear-gradient(120deg,#06432e,#0a7049);color:white;border-radius:24px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.ppdb h2{font-family:"Playfair Display",serif;font-size:30px;margin-bottom:7px}
+.ppdb p{color:#e2efe5;font-size:14px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-box{background:white;padding:25px;border-radius:17px;border:1px solid var(--line)}
+.contact-box h3{color:var(--green);margin-bottom:12px}
+.contact-box p{font-size:14px;color:var(--muted);margin:7px 0}
+.comment-form,.admin-form{display:grid;gap:12px}
+.field{width:100%;border:1px solid #dce5dc;border-radius:10px;padding:12px;background:#fff;outline:none}
+.field:focus{border-color:var(--green);box-shadow:0 0 0 3px #0b704415}
+.comment{background:white;border:1px solid var(--line);padding:15px;border-radius:12px;margin:10px 0}
+.comment strong{color:var(--green)}
+.comment p{font-size:13px;color:var(--muted);margin-top:5px}
+footer{background:#042f21;color:#d7e7dc;padding:35px 0;text-align:center}
+footer strong{color:#f1d18a}
+footer p{font-size:12px;margin-top:7px;color:#b9d0c1}
+.backtop{position:fixed;right:18px;bottom:18px;width:43px;height:43px;border:0;border-radius:50%;background:var(--gold);color:#173b29;font-size:20px;z-index:40;box-shadow:0 5px 15px #0002}
+
+#adminPanel{display:none;background:#f1f5ef;padding:45px 0}
+.admin-shell{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}
+.admin-head{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.admin-head h2{color:var(--green);font-family:"Playfair Display",serif}
+.admin-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}
+.admin-tabs button{border:1px solid var(--line);background:#f7faf6;border-radius:9px;padding:9px 12px;font-size:12px;font-weight:800;color:var(--green)}
+.admin-tabs button.active{background:var(--green);color:white}
+.admin-pane{display:none}
+.admin-pane.active{display:block}
+.admin-row{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px}
+.admin-row button{border:0;background:#fbe9e7;color:#9b332a;border-radius:7px;padding:7px 10px;font-weight:700;font-size:11px}
+.status{font-size:12px;color:var(--muted);min-height:18px}
+.hidden{display:none!important}
+
+@media(max-width:800px){
+.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+.hero-seal{width:180px;grid-row:1}
+.cards,.content-list{grid-template-columns:repeat(2,1fr)}
+.ppdb{display:block}
+.ppdb .btn{margin-top:18px}
+}
+@media(max-width:540px){
+.topline .container{justify-content:center;text-align:center}
+.head{gap:10px}
+.logo{width:53px;height:53px}
+.brand span{font-size:10px}
+nav a,nav button{padding:8px 10px;font-size:12px}
+.hero{padding:55px 0}
+.stat{padding:15px 6px}
+.stat strong{font-size:20px}
+.stat span{font-size:10px}
+.cards,.content-list{grid-template-columns:1fr}
+section{padding:52px 0}
+.ppdb{padding:27px}
+.admin-shell{padding:15px}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <img src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png" alt="Logo MTs Al-Fikr">
+<div class="topline">
+  <div class="container">
+    <span>📍 Cianjur Singkut, Kabupaten Sarolangun</span>
+    <span>Website Resmi MTs Al-Fikr Cianjur Singkut</span>
   </div>
-  <div class="header-text">
-    <h2>MTs AL-FIKR CIANJUR SINGKUT</h2>
-    <p>CIANJUR SINGKUT · KABUPATEN SAROLANGUN</p>
+</div>
+
+<header>
+  <div class="container head">
+    <img class="logo" src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png" alt="Logo MTs Al-Fikr" onerror="this.style.display='none'">
+    <div class="brand">
+      <strong>MTs AL-FIKR CIANJUR SINGKUT</strong>
+      <span>Membangun Generasi Berilmu, Beriman, dan Berakhlakul Karimah</span>
+    </div>
+  </div>
+
+  <div class="navwrap">
+    <nav class="container">
+      <a href="#beranda">Beranda</a>
+      <a href="#profil">Profil</a>
+      <a href="#guru">Guru</a>
+      <a href="#berita">Berita</a>
+      <a href="#pengumuman">Pengumuman</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#ppdb">PPDB</a>
+      <a href="#kontak">Kontak</a>
+      <button class="admin-link" onclick="toggleAdmin()">Admin</button>
+    </nav>
   </div>
 </header>
 
-<nav>
-  <a href="#beranda">Beranda</a>
-  <a href="#profil">Profil</a>
-  <a href="#guru">Guru</a>
-  <a href="#berita">Berita</a>
-  <a href="#pengumuman">Pengumuman</a>
-  <a href="#galeri">Galeri</a>
-  <a href="#komentar">Komentar</a>
-  <a href="#ppdb">PPDB</a>
-  <a href="#kontak">Kontak</a>
-  <a href="#adminArea" id="adminMenuLink">Admin</a>
-</nav>
+<main>
 
-<div class="hero" id="beranda">
-  <div class="hero-content">
-    <small>SELAMAT DATANG DI WEBSITE RESMI</small>
-    <h1>MTs Al-Fikr Cianjur Singkut</h1>
-    <p>Membangun generasi berilmu, beriman, berakhlakul karimah, dan siap menghadapi masa depan.</p>
-    <div class="hero-buttons">
-      <a class="btn" href="#profil">Jelajahi Madrasah</a>
-      <a class="btn btn-outline" href="#ppdb">Informasi PPDB</a>
-    </div>
-  </div>
-</div>
-
-<div class="highlight">
-  <div class="highlight-item"><strong>2011</strong><span>Tahun Berdiri</span></div>
-  <div class="highlight-item"><strong>MTs</strong><span>Jenjang Pendidikan</span></div>
-  <div class="highlight-item"><strong>Darul Fikr</strong><span>Di bawah Naungan Yayasan</span></div>
-</div>
-
-<section class="about" id="profil">
-  <div class="section-title">
-    <small>MENGENAL MADRASAH</small>
-    <h2>Profil Madrasah</h2>
-    <p>Mengenal lebih dekat MTs Al-Fikr Cianjur Singkut</p>
-  </div>
-  <div class="card profile-card">
-    <div class="card-icon">🏫</div>
-    <h3>MTs Al-Fikr Cianjur Singkut</h3>
-    <p>MTs Al-Fikr Cianjur Singkut merupakan lembaga pendidikan tingkat Madrasah Tsanawiyah yang berada di bawah naungan Yayasan Darul Fikr Singkut.</p>
-    <p>Madrasah ini berdiri sejak tahun 2011 sebagai bagian dari upaya menghadirkan pendidikan yang memadukan ilmu pengetahuan, nilai-nilai keislaman, pembinaan karakter, dan akhlakul karimah.</p>
-    <p>Informasi lebih lengkap mengenai sejarah, visi, misi, tujuan, dan identitas madrasah akan dilengkapi oleh pengelola.</p>
-    <span class="profile-label">Berdiri Tahun 2011</span>
-  </div>
-</section>
-
-<section id="guru">
-  <div class="section-title">
-    <small>SUMBER DAYA MANUSIA</small>
-    <h2>Guru dan Tenaga Kependidikan</h2>
-    <p>Mengenal tenaga pendidik dan kependidikan madrasah</p>
-  </div>
-  <div class="cards" id="staffContainer">
-    <div class="empty-state">Memuat data guru dan tenaga kependidikan...</div>
-  </div>
-</section>
-
-<section class="about" id="berita">
-  <div class="section-title">
-    <small>INFORMASI TERKINI</small>
-    <h2>Berita dan Kegiatan</h2>
-    <p>Informasi terbaru seputar aktivitas MTs Al-Fikr</p>
-  </div>
-  <div class="cards" id="newsContainer">
-    <div class="empty-state">Memuat berita...</div>
-  </div>
-</section>
-
-<section id="pengumuman">
-  <div class="section-title">
-    <small>INFORMASI PENTING</small>
-    <h2>Pengumuman</h2>
-    <p>Informasi dan pemberitahuan resmi madrasah</p>
-  </div>
-  <div class="cards" id="announcementContainer">
-    <div class="empty-state">Memuat pengumuman...</div>
-  </div>
-</section>
-
-<section class="about" id="galeri">
-  <div class="section-title">
-    <small>DOKUMENTASI</small>
-    <h2>Galeri Madrasah</h2>
-    <p>Mengabadikan kegiatan dan aktivitas MTs Al-Fikr</p>
-  </div>
-  <div class="cards" id="galleryContainer">
-    <div class="empty-state">Memuat dokumentasi...</div>
-  </div>
-</section>
-
-<section id="komentar">
-  <div class="section-title">
-    <small>ASPIRASI DAN SARAN</small>
-    <h2>Komentar Pengunjung</h2>
-    <p>Silakan sampaikan saran dan masukan untuk madrasah</p>
-  </div>
-  <div class="card comment-box">
-    <div id="visitorAuthArea">
-      <p id="visitorIdentity" class="signed-in">Silakan masuk dengan akun Google untuk mengirim komentar.</p>
-      <button class="btn" id="googleLoginButton" type="button">Masuk dengan Google</button>
-      <button class="small-btn" id="visitorLogoutButton" type="button" style="display:none">Keluar</button>
-    </div>
-    <div class="comment-form" id="commentForm" style="display:none">
-      <div class="field">
-        <label for="commentContent">Komentar atau saran</label>
-        <textarea id="commentContent" maxlength="1500" placeholder="Tuliskan komentar atau saran Anda..."></textarea>
+<section class="hero" id="beranda">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Pendidikan • Keislaman • Pengabdian</span>
+      <h1>Membentuk Generasi Cerdas, Beriman, dan Berakhlak Mulia</h1>
+      <p>Selamat datang di website resmi MTs Al-Fikr Cianjur Singkut. Ruang informasi pendidikan, kegiatan madrasah, prestasi, dan layanan bagi peserta didik serta masyarakat.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#profil">Mengenal Madrasah</a>
+        <a class="btn btn-outline" href="#ppdb">Informasi PPDB</a>
       </div>
-      <button class="btn" id="sendCommentButton" type="button">Kirim Komentar</button>
-      <p class="date-text">Komentar akan ditampilkan setelah mendapat persetujuan admin.</p>
     </div>
-    <div id="commentNotice" class="notice"></div>
-    <h3 style="color:var(--hijau);font-size:16px;margin:20px 0 12px">Komentar yang telah disetujui</h3>
-    <div id="commentsContainer"><div class="empty-state">Memuat komentar...</div></div>
+    <div class="hero-seal">
+      <img src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png" alt="Lambang MTs Al-Fikr">
+    </div>
   </div>
 </section>
 
-<section id="ppdb">
-  <div class="section-title">
-    <small>PENERIMAAN SISWA BARU</small>
-    <h2>Penerimaan Peserta Didik Baru</h2>
-    <p>Bergabung dan tumbuh bersama MTs Al-Fikr Cianjur Singkut</p>
+<div class="container stats">
+  <div class="stat-grid">
+    <div class="stat"><strong>2011</strong><span>Tahun Berdiri</span></div>
+    <div class="stat"><strong>MTs</strong><span>Jenjang Pendidikan</span></div>
+    <div class="stat"><strong>Darul Fikr</strong><span>Naungan Yayasan</span></div>
   </div>
-  <div class="ppdb-box">
-    <h3>Informasi PPDB MTs Al-Fikr</h3>
-    <p>Informasi persyaratan, jadwal pendaftaran, prosedur penerimaan, dan ketentuan lainnya akan diumumkan melalui halaman ini.</p>
-    <a class="btn" href="#kontak">Hubungi Madrasah</a>
+</div>
+
+<section id="profil">
+  <div class="container about-grid">
+    <div class="about-art">
+      <img src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png" alt="Logo MTs Al-Fikr">
+    </div>
+    <div class="about-copy">
+      <span class="kicker">Tentang Kami</span>
+      <h3>Profil MTs Al-Fikr Cianjur Singkut</h3>
+      <p>MTs Al-Fikr Cianjur Singkut merupakan lembaga pendidikan Islam tingkat menengah pertama yang berada di lingkungan Yayasan Darul Fikr Singkut, Kabupaten Sarolangun.</p>
+      <p>Sejak berdiri pada tahun 2011, madrasah berkomitmen menyelenggarakan pendidikan yang memadukan ilmu pengetahuan, nilai-nilai keislaman, pembinaan karakter, dan akhlakul karimah.</p>
+      <div class="values">
+        <span>Berilmu</span>
+        <span>Beriman</span>
+        <span>Berakhlakul Karimah</span>
+      </div>
+      <p style="margin-top:20px">
+        <a class="btn btn-gold" href="https://website-darul-fikr-singkut.pages.dev" target="_blank" rel="noopener">Kunjungi Website Yayasan</a>
+      </p>
+    </div>
   </div>
 </section>
 
-<section class="about" id="kontak">
-  <div class="section-title">
-    <small>INFORMASI DAN LAYANAN</small>
-    <h2>Hubungi Kami</h2>
-    <p>Informasi lebih lanjut mengenai MTs Al-Fikr Cianjur Singkut</p>
-  </div>
-  <div class="card contact-card">
-    <div class="card-icon">📍</div>
-    <h3>MTs Al-Fikr Cianjur Singkut</h3>
-    <p><strong>Alamat:</strong> Cianjur Singkut, Kabupaten Sarolangun</p>
-    <p><strong>Yayasan:</strong> Yayasan Darul Fikr Singkut</p>
-    <p><strong>Informasi:</strong> Kontak madrasah akan dilengkapi kemudian.</p>
+<section class="soft" id="guru">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Tenaga Pendidik</span>
+      <h2>Guru dan Tenaga Kependidikan</h2>
+      <p>Kenali para pendidik dan tenaga kependidikan MTs Al-Fikr.</p>
+    </div>
+    <div class="content-list" id="staffList">
+      <div class="empty">Data guru akan ditampilkan di sini setelah tersedia.</div>
+    </div>
   </div>
 </section>
 
-<!-- AREA LOGIN DAN DASHBOARD ADMIN -->
-<section class="admin-area" id="adminArea">
-  <div class="section-title">
-    <small>PENGELOLA WEBSITE</small>
-    <h2>Panel Admin MTs Al-Fikr</h2>
-    <p>Pengelolaan berita, pengumuman, guru, dokumentasi, dan komentar</p>
+<section id="berita">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Kabar Madrasah</span>
+      <h2>Berita Terbaru</h2>
+      <p>Informasi kegiatan, prestasi, dan perkembangan MTs Al-Fikr.</p>
+    </div>
+    <div class="content-list" id="newsList">
+      <div class="empty">Belum ada berita yang dipublikasikan.</div>
+    </div>
   </div>
+</section>
 
-  <div class="admin-box">
-    <div class="admin-login" id="adminLoginBox">
-      <h3 style="color:var(--hijau);margin-bottom:12px">Login Administrator</h3>
-      <p style="font-size:12px;color:var(--abu);margin-bottom:15px">Gunakan email dan kata sandi akun admin yang telah didaftarkan di Supabase.</p>
-      <div class="comment-form">
-        <div class="field">
-          <label for="adminEmail">Email admin</label>
-          <input type="email" id="adminEmail" autocomplete="username" placeholder="Email administrator">
+<section class="soft" id="pengumuman">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Informasi Penting</span>
+      <h2>Pengumuman</h2>
+      <p>Pengumuman resmi untuk peserta didik, orang tua, dan masyarakat.</p>
+    </div>
+    <div class="cards" id="announcementList">
+      <div class="empty">Belum ada pengumuman yang dipublikasikan.</div>
+    </div>
+  </div>
+</section>
+
+<section id="galeri">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Dokumentasi</span>
+      <h2>Galeri Kegiatan</h2>
+      <p>Dokumentasi kegiatan pembelajaran dan aktivitas madrasah.</p>
+    </div>
+    <div class="content-list" id="galleryList">
+      <div class="empty">Dokumentasi kegiatan akan ditampilkan di sini.</div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="ppdb">
+  <div class="container">
+    <div class="ppdb">
+      <div>
+        <span class="eyebrow">Penerimaan Peserta Didik Baru</span>
+        <h2>Ayo Bergabung Bersama MTs Al-Fikr</h2>
+        <p>Dapatkan informasi pendaftaran peserta didik baru melalui kontak madrasah.</p>
+      </div>
+      <a class="btn btn-gold" href="#kontak">Hubungi Madrasah</a>
+    </div>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Hubungi Kami</span>
+      <h2>Kontak Madrasah</h2>
+      <p>Silakan hubungi pihak madrasah untuk informasi lebih lanjut.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>MTs Al-Fikr Cianjur Singkut</h3>
+        <p>📍 Cianjur Singkut, Kabupaten Sarolangun, Jambi</p>
+        <p>🏫 Di bawah naungan Yayasan Darul Fikr Singkut</p>
+        <p>🌐 <a href="https://website-darul-fikr-singkut.pages.dev" target="_blank" rel="noopener">Website Yayasan Darul Fikr Singkut</a></p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Komentar dan Saran</h3>
+        <p>Masuk dengan akun Google untuk menyampaikan komentar atau saran. Komentar akan ditinjau admin sebelum ditampilkan.</p>
+
+        <div id="commentAuth">
+          <button class="btn btn-gold" onclick="googleLogin()">Masuk dengan Google</button>
         </div>
-        <div class="field">
-          <label for="adminPassword">Kata sandi</label>
-          <input type="password" id="adminPassword" autocomplete="current-password" placeholder="Kata sandi">
-        </div>
-        <button class="btn" id="adminLoginButton" type="button">Login Admin</button>
-      </div>
-      <div id="adminLoginNotice" class="notice"></div>
-    </div>
 
-    <div class="admin-dashboard" id="adminDashboard" style="display:none">
-      <p class="signed-in" id="adminIdentity"></p>
-      <button class="small-btn danger" id="adminLogoutButton" type="button">Keluar dari Panel Admin</button>
-
-      <div class="admin-tabs">
-        <button class="active" data-tab="tabNews">Berita</button>
-        <button data-tab="tabAnnouncements">Pengumuman</button>
-        <button data-tab="tabStaff">Guru/Staf</button>
-        <button data-tab="tabGallery">Galeri</button>
-        <button data-tab="tabComments">Komentar</button>
-      </div>
-
-      <!-- FORM BERITA -->
-      <div class="admin-panel active" id="tabNews">
-        <h3 style="color:var(--hijau)">Kelola Berita</h3>
-        <form id="newsForm" class="comment-form">
-          <input type="hidden" id="newsId">
-          <div class="field"><label>Judul berita</label><input id="newsTitle" required maxlength="180"></div>
-          <div class="field"><label>Ringkasan berita</label><textarea id="newsExcerpt" required maxlength="500"></textarea></div>
-          <div class="field"><label>Isi berita</label><textarea id="newsContent" required style="min-height:150px"></textarea></div>
-          <div class="field"><label>Foto sampul (opsional)</label><input type="file" id="newsCover" accept="image/*"></div>
-          <label class="check-line"><input type="checkbox" id="newsPublished" checked> Terbitkan berita</label>
-          <div class="action-row">
-            <button class="btn" type="submit">Simpan Berita</button>
-            <button class="small-btn" type="button" onclick="resetForm('newsForm')">Kosongkan Form</button>
-          </div>
+        <form class="comment-form hidden" id="commentForm">
+          <textarea class="field" id="commentText" rows="3" maxlength="1000" placeholder="Tulis komentar atau saran..." required></textarea>
+          <button class="btn btn-gold" type="submit">Kirim Komentar</button>
         </form>
-        <div id="newsAdminList" class="admin-list"></div>
-      </div>
 
-      <!-- FORM PENGUMUMAN -->
-      <div class="admin-panel" id="tabAnnouncements">
-        <h3 style="color:var(--hijau)">Kelola Pengumuman</h3>
-        <form id="announcementForm" class="comment-form">
-          <input type="hidden" id="announcementId">
-          <div class="field"><label>Judul pengumuman</label><input id="announcementTitle" required maxlength="180"></div>
-          <div class="field"><label>Isi pengumuman</label><textarea id="announcementContent" required></textarea></div>
-          <label class="check-line"><input type="checkbox" id="announcementPublished" checked> Terbitkan pengumuman</label>
-          <div class="action-row">
-            <button class="btn" type="submit">Simpan Pengumuman</button>
-            <button class="small-btn" type="button" onclick="resetForm('announcementForm')">Kosongkan Form</button>
-          </div>
-        </form>
-        <div id="announcementAdminList" class="admin-list"></div>
+        <p class="status" id="commentStatus"></p>
+        <div id="commentsList"></div>
       </div>
-
-      <!-- FORM GURU -->
-      <div class="admin-panel" id="tabStaff">
-        <h3 style="color:var(--hijau)">Kelola Guru dan Tenaga Kependidikan</h3>
-        <form id="staffForm" class="comment-form">
-          <input type="hidden" id="staffId">
-          <div class="form-grid">
-            <div class="field"><label>Nama lengkap</label><input id="staffName" required maxlength="150"></div>
-            <div class="field"><label>Jabatan / Mata Pelajaran</label><input id="staffPosition" required maxlength="150"></div>
-          </div>
-          <div class="field"><label>Profil singkat</label><textarea id="staffBio"></textarea></div>
-          <div class="field"><label>Foto guru/staf (opsional)</label><input type="file" id="staffPhoto" accept="image/*"></div>
-          <label class="check-line"><input type="checkbox" id="staffPublished" checked> Tampilkan di website</label>
-          <div class="action-row">
-            <button class="btn" type="submit">Simpan Data</button>
-            <button class="small-btn" type="button" onclick="resetForm('staffForm')">Kosongkan Form</button>
-          </div>
-        </form>
-        <div id="staffAdminList" class="admin-list"></div>
-      </div>
-
-      <!-- FORM GALERI -->
-      <div class="admin-panel" id="tabGallery">
-        <h3 style="color:var(--hijau)">Kelola Dokumentasi Galeri</h3>
-        <form id="galleryForm" class="comment-form">
-          <input type="hidden" id="galleryId">
-          <div class="field"><label>Judul kegiatan</label><input id="galleryTitle" required maxlength="180"></div>
-          <div class="field"><label>Keterangan</label><textarea id="galleryDescription"></textarea></div>
-          <div class="field"><label>Foto kegiatan</label><input type="file" id="galleryImage" accept="image/*"></div>
-          <label class="check-line"><input type="checkbox" id="galleryPublished" checked> Tampilkan di website</label>
-          <div class="action-row">
-            <button class="btn" type="submit">Simpan Dokumentasi</button>
-            <button class="small-btn" type="button" onclick="resetForm('galleryForm')">Kosongkan Form</button>
-          </div>
-          <p class="date-text">Foto wajib dipilih saat menambahkan dokumentasi baru. Saat mengedit, foto lama dapat dipertahankan.</p>
-        </form>
-        <div id="galleryAdminList" class="admin-list"></div>
-      </div>
-
-      <!-- MODERASI KOMENTAR -->
-      <div class="admin-panel" id="tabComments">
-        <h3 style="color:var(--hijau)">Moderasi Komentar Pengunjung</h3>
-        <p class="date-text">Setujui komentar agar tampil di halaman publik. Komentar yang tidak sesuai dapat dihapus.</p>
-        <div id="commentsAdminList" class="admin-list"></div>
-      </div>
-
-      <div id="adminNotice" class="notice"></div>
     </div>
   </div>
 </section>
 
-<div class="foundation-link">
-  <p>MTs Al-Fikr Cianjur Singkut merupakan bagian dari</p>
-  <a href="https://website-darul-fikr-singkut.pages.dev" target="_blank" rel="noopener">YAYASAN DARUL FIKR SINGKUT</a>
-</div>
+</main>
+
+<!-- PANEL ADMIN -->
+<section id="adminPanel">
+  <div class="container">
+    <div class="admin-shell">
+
+      <div class="admin-head">
+        <div>
+          <span class="kicker">Area Pengelola</span>
+          <h2>Panel Admin MTs Al-Fikr</h2>
+          <p class="status" id="adminWho"></p>
+        </div>
+        <button class="btn btn-outline" style="background:#eaf2e9;color:#075638" onclick="adminLogout()">Keluar</button>
+      </div>
+
+      <div id="adminLogin">
+        <p style="font-size:13px;color:#65776e;margin-bottom:12px">Masuk menggunakan email dan kata sandi akun admin Supabase.</p>
+        <form class="admin-form" id="loginForm">
+          <input class="field" type="email" id="adminEmail" placeholder="Email admin" required>
+          <input class="field" type="password" id="adminPassword" placeholder="Kata sandi" required>
+          <button class="btn btn-gold" type="submit">Login Admin</button>
+        </form>
+        <p class="status" id="loginStatus"></p>
+      </div>
+
+      <div id="adminArea" class="hidden">
+
+        <div class="admin-tabs">
+          <button class="active" data-pane="newsPane">Berita</button>
+          <button data-pane="announcePane">Pengumuman</button>
+          <button data-pane="staffPane">Guru</button>
+          <button data-pane="galleryPane">Galeri</button>
+          <button data-pane="commentsPane">Moderasi Komentar</button>
+        </div>
+
+        <div class="admin-pane active" id="newsPane">
+          <h3>Tambah Berita</h3>
+          <form class="admin-form" id="newsForm">
+            <input class="field" id="newsTitle" placeholder="Judul berita" required>
+            <input class="field" id="newsExcerpt" placeholder="Ringkasan berita">
+            <textarea class="field" id="newsContent" rows="4" placeholder="Isi berita" required></textarea>
+            <input class="field" id="newsImage" type="file" accept="image/*">
+            <label><input type="checkbox" id="newsPublished" checked> Publikasikan berita</label>
+            <button class="btn btn-gold">Simpan Berita</button>
+          </form>
+          <p class="status" id="newsStatus"></p>
+          <div id="adminNewsList"></div>
+        </div>
+
+        <div class="admin-pane" id="announcePane">
+          <h3>Tambah Pengumuman</h3>
+          <form class="admin-form" id="announcementForm">
+            <input class="field" id="announcementTitle" placeholder="Judul pengumuman" required>
+            <textarea class="field" id="announcementContent" rows="4" placeholder="Isi pengumuman" required></textarea>
+            <label><input type="checkbox" id="announcementPublished" checked> Publikasikan</label>
+            <button class="btn btn-gold">Simpan Pengumuman</button>
+          </form>
+          <p class="status" id="announcementStatus"></p>
+          <div id="adminAnnouncementList"></div>
+        </div>
+
+        <div class="admin-pane" id="staffPane">
+          <h3>Tambah Guru / Tenaga Kependidikan</h3>
+          <form class="admin-form" id="staffForm">
+            <input class="field" id="staffName" placeholder="Nama lengkap" required>
+            <input class="field" id="staffPosition" placeholder="Jabatan / Mata pelajaran" required>
+            <textarea class="field" id="staffBio" rows="2" placeholder="Keterangan singkat (opsional)"></textarea>
+            <input class="field" id="staffImage" type="file" accept="image/*">
+            <label><input type="checkbox" id="staffPublished" checked> Tampilkan di website</label>
+            <button class="btn btn-gold">Simpan Data Guru</button>
+          </form>
+          <p class="status" id="staffStatus"></p>
+          <div id="adminStaffList"></div>
+        </div>
+
+        <div class="admin-pane" id="galleryPane">
+          <h3>Unggah Dokumentasi Kegiatan</h3>
+          <form class="admin-form" id="galleryForm">
+            <input class="field" id="galleryTitle" placeholder="Judul / nama kegiatan" required>
+            <textarea class="field" id="galleryDescription" rows="2" placeholder="Keterangan kegiatan"></textarea>
+            <input class="field" id="galleryImage" type="file" accept="image/*" required>
+            <label><input type="checkbox" id="galleryPublished" checked> Tampilkan di website</label>
+            <button class="btn btn-gold">Unggah Dokumentasi</button>
+          </form>
+          <p class="status" id="galleryStatus"></p>
+          <div id="adminGalleryList"></div>
+        </div>
+
+        <div class="admin-pane" id="commentsPane">
+          <h3>Komentar Menunggu Persetujuan</h3>
+          <div id="adminCommentsList"></div>
+          <p class="status" id="moderationStatus"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <p><strong>MTs AL-FIKR CIANJUR SINGKUT</strong></p>
-  <p>Membangun Generasi Berilmu, Beriman, dan Berakhlakul Karimah</p>
-  <p>© 2026 MTs Al-Fikr Cianjur Singkut</p>
-  <p>Bagian dari Yayasan Darul Fikr Singkut</p>
+  <div class="container">
+    <strong>MTs AL-FIKR CIANJUR SINGKUT</strong>
+    <p>Membangun Generasi Berilmu, Beriman, dan Berakhlakul Karimah</p>
+    <p>© <span id="year"></span> MTs Al-Fikr Cianjur Singkut • Yayasan Darul Fikr Singkut</p>
+  </div>
 </footer>
 
-<button id="topButton" aria-label="Kembali ke atas">↑</button>
+<button class="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas">↑</button>
 
-<script type="module">
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-/* KONFIGURASI SUPABASE */
+<script>
+// ==========================================
+// KONFIGURASI SUPABASE
+// ==========================================
 const SUPABASE_URL = "https://mzsvtofwppivatofehzq.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_tF7XksRKXIeiQcZvlAauXw_NxRKaLLA";
 const BUCKET = "dokumentasi-mts";
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+const db = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
 
 let currentUser = null;
-let currentAdmin = false;
-let newsCache = [];
-let announcementCache = [];
-let staffCache = [];
-let galleryCache = [];
-let commentCache = [];
 
-const $ = id => document.getElementById(id);
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function escapeHTML(value=""){
-  return String(value).replace(/[&<>"']/g, char => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-  })[char]);
+const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#39;"
+}[c]));
+
+const setStatus = (id,message) => {
+  const el = document.getElementById(id);
+  if(el) el.textContent = message;
+};
+
+const slugify = text =>
+  text.toLowerCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g,"")
+  .replace(/[^a-z0-9]+/g,"-")
+  .replace(/^-|-$/g,"")
+  + "-" + Date.now();
+
+function toggleAdmin(){
+  const panel = document.getElementById("adminPanel");
+  panel.style.display = panel.style.display === "block" ? "none" : "block";
+  panel.scrollIntoView({behavior:"smooth"});
 }
 
-function showNotice(id,message,type="success"){
-  const el = $(id);
-  if(!el) return;
-  el.textContent = message;
-  el.className = "notice " + type;
-}
-
-function clearNotice(id){
-  const el = $(id);
-  if(el){el.textContent="";el.className="notice";}
-}
-
-function formatDate(value){
-  if(!value) return "";
-  return new Date(value).toLocaleDateString("id-ID",{
-    day:"numeric",month:"long",year:"numeric"
-  });
-}
-
-function slugify(value){
-  return value.toLowerCase().trim()
-    .replace(/[^a-z0-9]+/g,"-")
-    .replace(/^-|-$/g,"");
-}
-
-function resetForm(formId){
-  const form = $(formId);
-  if(form) form.reset();
-  const hidden = form?.querySelector('input[type="hidden"]');
-  if(hidden) hidden.value="";
-}
-
-window.resetForm = resetForm;
-
-/* FOTO STORAGE: BUCKET PRIVATE, URL BERTANDA TANGAN */
-async function imageUrl(path){
+// ==========================================
+// UPLOAD DAN FOTO SUPABASE STORAGE
+// ==========================================
+async function signedImage(path){
   if(!path) return "";
-  const {data,error} = await supabase.storage
+  const {data,error} = await db.storage
     .from(BUCKET)
     .createSignedUrl(path,3600);
-  if(error){
-    console.warn("Gagal membuat URL foto:",error.message);
-    return "";
-  }
-  return data.signedUrl;
+
+  return error ? "" : data.signedUrl;
 }
 
 async function uploadImage(file,folder){
   if(!file) return null;
-  if(!file.type.startsWith("image/")) throw new Error("File yang dipilih harus berupa gambar.");
-  if(file.size > 5*1024*1024) throw new Error("Ukuran foto maksimal 5 MB.");
-  const extension = file.name.split(".").pop().toLowerCase().replace(/[^a-z0-9]/g,"") || "jpg";
-  const path = `${folder}/${Date.now()}-${crypto.randomUUID()}.${extension}`;
-  const {error} = await supabase.storage.from(BUCKET).upload(path,file,{
-    cacheControl:"3600",upsert:false,contentType:file.type
-  });
+
+  if(!file.type.startsWith("image/")){
+    throw new Error("File harus berupa gambar.");
+  }
+
+  if(file.size > 5 * 1024 * 1024){
+    throw new Error("Ukuran gambar maksimal 5 MB.");
+  }
+
+  const ext = (file.name.split(".").pop() || "jpg")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g,"");
+
+  const path = folder + "/" + Date.now() + "-" +
+    Math.random().toString(36).slice(2,8) + "." + ext;
+
+  const {error} = await db.storage
+    .from(BUCKET)
+    .upload(path,file,{
+      upsert:false,
+      contentType:file.type
+    });
+
   if(error) throw error;
+
   return path;
 }
 
-async function deleteStoredImage(path){
-  if(!path) return;
-  const {error} = await supabase.storage.from(BUCKET).remove([path]);
-  if(error) console.warn("Foto tidak terhapus dari penyimpanan:",error.message);
+// ==========================================
+// MENAMPILKAN KONTEN WEBSITE
+// ==========================================
+async function loadPublic(){
+
+  const [news,ann,staff,gallery,comments] = await Promise.all([
+
+    db.from("news")
+      .select("id,title,excerpt,content,cover_path,published_at,created_at")
+      .eq("is_published",true)
+      .order("published_at",{ascending:false})
+      .limit(6),
+
+    db.from("announcements")
+      .select("id,title,content,created_at")
+      .eq("is_published",true)
+      .order("created_at",{ascending:false})
+      .limit(8),
+
+    db.from("staff")
+      .select("id,full_name,position,bio,photo_path,sort_order")
+      .eq("is_published",true)
+      .order("sort_order")
+      .limit(30),
+
+    db.from("gallery")
+      .select("id,title,description,image_path,created_at")
+      .eq("is_published",true)
+      .order("created_at",{ascending:false})
+      .limit(12),
+
+    db.from("comments")
+      .select("id,name,content,created_at")
+      .eq("status","approved")
+      .order("created_at",{ascending:false})
+      .limit(10)
+
+  ]);
+
+  if(!news.error) await renderNews(news.data || []);
+  if(!ann.error) renderAnnouncements(ann.data || []);
+  if(!staff.error) await renderStaff(staff.data || []);
+  if(!gallery.error) await renderGallery(gallery.data || []);
+  if(!comments.error) renderComments(comments.data || []);
 }
 
-/* MEMUAT KONTEN PUBLIK */
-async function loadStaff(){
-  const {data,error} = await supabase.from("staff")
-    .select("*").eq("is_published",true).order("sort_order",{ascending:true});
-  const box = $("staffContainer");
-  if(error){box.innerHTML='<div class="empty-state">Data guru belum dapat dimuat.</div>';return;}
-  staffCache=data||[];
-  if(!staffCache.length){box.innerHTML='<div class="empty-state">Data guru dan tenaga kependidikan belum ditambahkan.</div>';return;}
-  box.innerHTML="";
-  for(const item of staffCache){
-    const photo=await imageUrl(item.photo_path);
-    box.insertAdjacentHTML("beforeend",`
-      <article class="card">
-        ${photo?`<img class="item-image" src="${photo}" alt="${escapeHTML(item.full_name)}">`:'<div class="card-icon">👨‍🏫</div>'}
-        <h3>${escapeHTML(item.full_name)}</h3>
-        <p><strong>${escapeHTML(item.position||"")}</strong></p>
-        <p>${escapeHTML(item.bio||"")}</p>
-      </article>`);
+async function renderNews(rows){
+  const el = document.getElementById("newsList");
+
+  if(!rows.length){
+    el.innerHTML = '<div class="empty">Belum ada berita yang dipublikasikan.</div>';
+    return;
   }
+
+  el.innerHTML = (await Promise.all(rows.map(async r => {
+    const url = await signedImage(r.cover_path);
+
+    return `
+      <article class="content-card">
+        ${url ? `<img src="${url}" alt="${esc(r.title)}">` : ""}
+        <div class="content-body">
+          <small>${new Date(r.published_at || r.created_at).toLocaleDateString("id-ID")}</small>
+          <h3>${esc(r.title)}</h3>
+          <p>${esc(r.excerpt || r.content).slice(0,180)}</p>
+          <button class="btn btn-gold" style="margin-top:12px"
+            onclick="showNews('${encodeURIComponent(r.id)}')">
+            Baca selengkapnya
+          </button>
+        </div>
+      </article>
+    `;
+  }))).join("");
 }
 
-async function loadNews(){
-  const {data,error}=await supabase.from("news")
-    .select("*").eq("is_published",true).order("published_at",{ascending:false});
-  const box=$("newsContainer");
-  if(error){box.innerHTML='<div class="empty-state">Berita belum dapat dimuat.</div>';return;}
-  newsCache=data||[];
-  if(!newsCache.length){box.innerHTML='<div class="empty-state">Belum ada berita yang diterbitkan.</div>';return;}
-  box.innerHTML="";
-  for(const item of newsCache){
-    const photo=await imageUrl(item.cover_path);
-    box.insertAdjacentHTML("beforeend",`
-      <article class="card">
-        ${photo?`<img class="item-image" src="${photo}" alt="${escapeHTML(item.title)}">`:'<div class="card-icon">📰</div>'}
-        <p class="date-text">${formatDate(item.published_at||item.created_at)}</p>
-        <h3>${escapeHTML(item.title)}</h3>
-        <p>${escapeHTML(item.excerpt||"")}</p>
-        <button class="small-btn" data-read-news="${escapeHTML(item.id)}">Baca selengkapnya</button>
-      </article>`);
+async function showNews(encoded){
+  const id = decodeURIComponent(encoded);
+
+  const {data,error} = await db.from("news")
+    .select("title,content,published_at,created_at")
+    .eq("id",id)
+    .single();
+
+  if(error){
+    alert("Berita tidak dapat dibuka.");
+    return;
   }
-  box.querySelectorAll("[data-read-news]").forEach(button=>{
-    button.addEventListener("click",()=>{
-      const item=newsCache.find(x=>x.id===button.dataset.readNews);
-      if(!item)return;
-      alert(item.title+"\n\n"+(item.content||""));
-    });
-  });
+
+  alert(data.title + "\n\n" + data.content);
 }
 
-async function loadAnnouncements(){
-  const {data,error}=await supabase.from("announcements")
-    .select("*").eq("is_published",true).order("created_at",{ascending:false});
-  const box=$("announcementContainer");
-  if(error){box.innerHTML='<div class="empty-state">Pengumuman belum dapat dimuat.</div>';return;}
-  announcementCache=data||[];
-  if(!announcementCache.length){box.innerHTML='<div class="empty-state">Belum ada pengumuman terbaru.</div>';return;}
-  box.innerHTML="";
-  announcementCache.forEach(item=>{
-    box.insertAdjacentHTML("beforeend",`
+function renderAnnouncements(rows){
+  const el = document.getElementById("announcementList");
+
+  el.innerHTML = rows.length
+    ? rows.map(r => `
       <article class="card">
         <div class="card-icon">📢</div>
-        <p class="date-text">${formatDate(item.created_at)}</p>
-        <h3>${escapeHTML(item.title)}</h3>
-        <p class="content-detail">${escapeHTML(item.content||"")}</p>
-      </article>`);
-  });
+        <h3>${esc(r.title)}</h3>
+        <p>${esc(r.content)}</p>
+      </article>
+    `).join("")
+    : '<div class="empty">Belum ada pengumuman yang dipublikasikan.</div>';
 }
 
-async function loadGallery(){
-  const {data,error}=await supabase.from("gallery")
-    .select("*").eq("is_published",true).order("created_at",{ascending:false});
-  const box=$("galleryContainer");
-  if(error){box.innerHTML='<div class="empty-state">Galeri belum dapat dimuat.</div>';return;}
-  galleryCache=data||[];
-  if(!galleryCache.length){box.innerHTML='<div class="empty-state"><div class="card-icon">📷</div>Belum ada dokumentasi kegiatan.</div>';return;}
-  box.innerHTML="";
-  for(const item of galleryCache){
-    const photo=await imageUrl(item.image_path);
-    box.insertAdjacentHTML("beforeend",`
-      <article class="card">
-        ${photo?`<img class="item-image" src="${photo}" alt="${escapeHTML(item.title)}">`:'<div class="card-icon">📷</div>'}
-        <h3>${escapeHTML(item.title)}</h3>
-        <p>${escapeHTML(item.description||"")}</p>
-        <p class="date-text">${formatDate(item.created_at)}</p>
-      </article>`);
+async function renderStaff(rows){
+  const el = document.getElementById("staffList");
+
+  if(!rows.length){
+    el.innerHTML = '<div class="empty">Data guru akan ditampilkan di sini setelah tersedia.</div>';
+    return;
   }
+
+  el.innerHTML = (await Promise.all(rows.map(async r => {
+    const url = await signedImage(r.photo_path);
+
+    return `
+      <article class="card teacher-card">
+        ${url
+          ? `<img src="${url}" alt="${esc(r.full_name)}">`
+          : '<div class="card-icon" style="margin:auto">👤</div>'}
+        <h3>${esc(r.full_name)}</h3>
+        <p>${esc(r.position)}</p>
+        ${r.bio ? `<p>${esc(r.bio)}</p>` : ""}
+      </article>
+    `;
+  }))).join("");
 }
 
-async function loadComments(){
-  const {data,error}=await supabase.from("comments")
-    .select("*").eq("status","approved").order("created_at",{ascending:false});
-  const box=$("commentsContainer");
-  if(error){box.innerHTML='<div class="empty-state">Komentar belum dapat dimuat.</div>';return;}
-  if(!data?.length){box.innerHTML='<div class="empty-state">Belum ada komentar yang ditampilkan.</div>';return;}
-  box.innerHTML="";
-  data.forEach(item=>{
-    box.insertAdjacentHTML("beforeend",`
-      <div style="padding:13px 0;border-bottom:1px solid var(--garis)">
-        <strong style="font-size:13px;color:var(--hijau)">${escapeHTML(item.name||"Pengunjung")}</strong>
-        <p style="font-size:13px;white-space:pre-wrap">${escapeHTML(item.content)}</p>
-        <p class="date-text">${formatDate(item.created_at)}</p>
-      </div>`);
-  });
+async function renderGallery(rows){
+  const el = document.getElementById("galleryList");
+
+  if(!rows.length){
+    el.innerHTML = '<div class="empty">Dokumentasi kegiatan akan ditampilkan di sini.</div>';
+    return;
+  }
+
+  el.innerHTML = (await Promise.all(rows.map(async r => {
+    const url = await signedImage(r.image_path);
+
+    return `
+      <article class="content-card">
+        ${url ? `<img src="${url}" alt="${esc(r.title)}">` : ""}
+        <div class="content-body">
+          <h3>${esc(r.title)}</h3>
+          <p>${esc(r.description || "Dokumentasi kegiatan MTs Al-Fikr")}</p>
+        </div>
+      </article>
+    `;
+  }))).join("");
 }
 
-async function loadPublicContent(){
-  await Promise.all([
-    loadStaff(),loadNews(),loadAnnouncements(),loadGallery(),loadComments()
-  ]);
+function renderComments(rows){
+  const el = document.getElementById("commentsList");
+
+  el.innerHTML = rows.length
+    ? rows.map(r => `
+      <div class="comment">
+        <strong>${esc(r.name)}</strong>
+        <p>${esc(r.content)}</p>
+      </div>
+    `).join("")
+    : "<p class='status'>Belum ada komentar yang ditampilkan.</p>";
 }
 
-/* LOGIN PENGUNJUNG GOOGLE */
-$("googleLoginButton").addEventListener("click",async()=>{
-  clearNotice("commentNotice");
-  const {error}=await supabase.auth.signInWithOAuth({
+// ==========================================
+// LOGIN GOOGLE UNTUK PENGUNJUNG
+// ==========================================
+async function googleLogin(){
+  setStatus("commentStatus","Mengarahkan ke halaman login Google...");
+
+  const {error} = await db.auth.signInWithOAuth({
     provider:"google",
-    options:{redirectTo:window.location.origin}
-  });
-  if(error) showNotice("commentNotice","Login Google gagal: "+error.message,"error");
-});
-
-$("visitorLogoutButton").addEventListener("click",async()=>{
-  await supabase.auth.signOut();
-});
-
-async function refreshVisitor(){
-  const {data:{user}}=await supabase.auth.getUser();
-  currentUser=user;
-  $("googleLoginButton").style.display=user?"none":"inline-block";
-  $("visitorLogoutButton").style.display=user?"inline-block":"none";
-  $("commentForm").style.display=user?"grid":"none";
-  $("visitorIdentity").textContent=user
-    ? "Masuk sebagai "+(user.user_metadata?.full_name||user.email)
-    : "Silakan masuk dengan akun Google untuk mengirim komentar.";
-}
-
-$("sendCommentButton").addEventListener("click",async()=>{
-  clearNotice("commentNotice");
-  const content=$("commentContent").value.trim();
-  if(!currentUser){showNotice("commentNotice","Silakan login dengan Google terlebih dahulu.","error");return;}
-  if(content.length<3){showNotice("commentNotice","Komentar terlalu pendek.","error");return;}
-  $("sendCommentButton").disabled=true;
-  const name=currentUser.user_metadata?.full_name||currentUser.user_metadata?.name||currentUser.email;
-  const {error}=await supabase.from("comments").insert({
-    user_id:currentUser.id,name,content,status:"pending"
-  });
-  $("sendCommentButton").disabled=false;
-  if(error){showNotice("commentNotice","Komentar gagal dikirim: "+error.message,"error");return;}
-  $("commentContent").value="";
-  showNotice("commentNotice","Komentar berhasil dikirim dan menunggu persetujuan admin.","success");
-});
-
-/* LOGIN ADMIN DAN PEMERIKSAAN HAK AKSES */
-async function checkAdmin(){
-  const {data:{user}}=await supabase.auth.getUser();
-  currentUser=user;
-  currentAdmin=false;
-  if(!user){
-    showAdminLoggedOut();
-    return;
-  }
-  const {data,error}=await supabase.from("user_roles")
-    .select("role").eq("user_id",user.id).maybeSingle();
-
-  if(error || !data || !["yayasan_admin","mts_admin"].includes(data.role)){
-    showAdminLoggedOut();
-    return;
-  }
-
-  currentAdmin=true;
-  $("adminLoginBox").style.display="none";
-  $("adminDashboard").style.display="block";
-  $("adminIdentity").textContent="Administrator: "+user.email+" | Hak akses: "+data.role;
-  await loadAdminLists();
-}
-
-function showAdminLoggedOut(){
-  $("adminLoginBox").style.display="block";
-  $("adminDashboard").style.display="none";
-}
-
-$("adminLoginButton").addEventListener("click",async()=>{
-  clearNotice("adminLoginNotice");
-  const email=$("adminEmail").value.trim();
-  const password=$("adminPassword").value;
-  if(!email||!password){showNotice("adminLoginNotice","Isi email dan kata sandi terlebih dahulu.","error");return;}
-  $("adminLoginButton").disabled=true;
-  const {error}=await supabase.auth.signInWithPassword({email,password});
-  $("adminLoginButton").disabled=false;
-  if(error){showNotice("adminLoginNotice","Login gagal: "+error.message,"error");return;}
-  await checkAdmin();
-  if(!currentAdmin){
-    await supabase.auth.signOut();
-    showNotice("adminLoginNotice","Akun berhasil masuk, tetapi belum memiliki hak admin. Hubungi pengelola Supabase.","error");
-  }
-});
-
-$("adminLogoutButton").addEventListener("click",async()=>{
-  await supabase.auth.signOut();
-});
-
-supabase.auth.onAuthStateChange(()=>{
-  setTimeout(async()=>{
-    await refreshVisitor();
-    await checkAdmin();
-  },0);
-});
-
-/* NAVIGASI TAB ADMIN */
-document.querySelectorAll(".admin-tabs button").forEach(button=>{
-  button.addEventListener("click",()=>{
-    document.querySelectorAll(".admin-tabs button").forEach(x=>x.classList.remove("active"));
-    document.querySelectorAll(".admin-panel").forEach(x=>x.classList.remove("active"));
-    button.classList.add("active");
-    $(button.dataset.tab).classList.add("active");
-  });
-});
-
-/* DAFTAR DATA ADMIN */
-async function loadAdminLists(){
-  if(!currentAdmin)return;
-  const results=await Promise.all([
-    supabase.from("news").select("*").order("created_at",{ascending:false}),
-    supabase.from("announcements").select("*").order("created_at",{ascending:false}),
-    supabase.from("staff").select("*").order("sort_order",{ascending:true}),
-    supabase.from("gallery").select("*").order("created_at",{ascending:false}),
-    supabase.from("comments").select("*").order("created_at",{ascending:false})
-  ]);
-
-  const [n,a,s,g,c]=results;
-  if(n.error||a.error||s.error||g.error||c.error){
-    showNotice("adminNotice","Sebagian data admin gagal dimuat. Periksa kebijakan akses Supabase.","error");
-  }
-
-  newsCache=n.data||[];
-  announcementCache=a.data||[];
-  staffCache=s.data||[];
-  galleryCache=g.data||[];
-  commentCache=c.data||[];
-
-  renderAdminList("newsAdminList",newsCache,"title","news");
-  renderAdminList("announcementAdminList",announcementCache,"title","announcement");
-  renderAdminList("staffAdminList",staffCache,"full_name","staff");
-  renderAdminList("galleryAdminList",galleryCache,"title","gallery");
-  renderCommentsAdmin();
-}
-
-function renderAdminList(containerId,items,label,type){
-  const box=$(containerId);
-  if(!items.length){box.innerHTML='<div class="empty-state">Belum ada data.</div>';return;}
-  box.innerHTML="";
-  items.forEach(item=>{
-    const published=item.is_published;
-    const row=document.createElement("div");
-    row.className="admin-list-item";
-    const title=document.createElement("div");
-    const strong=document.createElement("strong");
-    strong.textContent=item[label]||"(Tanpa judul)";
-    const small=document.createElement("small");
-    small.textContent=published?"Status: Terbit / Tampil":"Status: Draft / Disembunyikan";
-    title.append(strong,small);
-    const actions=document.createElement("div");
-    actions.className="action-row";
-    const edit=document.createElement("button");
-    edit.className="small-btn gold";edit.textContent="Edit";
-    edit.addEventListener("click",()=>editItem(type,item.id));
-    const del=document.createElement("button");
-    del.className="small-btn danger";del.textContent="Hapus";
-    del.addEventListener("click",()=>deleteItem(type,item.id));
-    actions.append(edit,del);
-    row.append(title,actions);
-    box.append(row);
-  });
-}
-
-function renderCommentsAdmin(){
-  const box=$("commentsAdminList");
-  if(!commentCache.length){box.innerHTML='<div class="empty-state">Belum ada komentar.</div>';return;}
-  box.innerHTML="";
-  commentCache.forEach(item=>{
-    const row=document.createElement("div");
-    row.className="admin-list-item";
-    const info=document.createElement("div");
-    const strong=document.createElement("strong");
-    strong.textContent=item.name||"Pengunjung";
-    const p=document.createElement("p");
-    p.style.fontSize="12px";p.style.whiteSpace="pre-wrap";p.textContent=item.content;
-    const small=document.createElement("small");
-    small.textContent="Status: "+item.status+" | "+formatDate(item.created_at);
-    info.append(strong,p,small);
-    const actions=document.createElement("div");
-    actions.className="action-row";
-    if(item.status!=="approved"){
-      const approve=document.createElement("button");
-      approve.className="small-btn";approve.textContent="Setujui";
-      approve.addEventListener("click",()=>moderateComment(item.id,"approved"));
-      actions.append(approve);
+    options:{
+      redirectTo:window.location.origin + window.location.pathname
     }
-    const reject=document.createElement("button");
-    reject.className="small-btn gold";reject.textContent="Tolak";
-    reject.addEventListener("click",()=>moderateComment(item.id,"rejected"));
-    const del=document.createElement("button");
-    del.className="small-btn danger";del.textContent="Hapus";
-    del.addEventListener("click",()=>deleteComment(item.id));
-    actions.append(reject,del);
-    row.append(info,actions);
-    box.append(row);
   });
+
+  if(error){
+    setStatus("commentStatus","Login gagal: " + error.message);
+  }
 }
 
-function editItem(type,id){
-  let item;
-  if(type==="news")item=newsCache.find(x=>x.id===id);
-  if(type==="announcement")item=announcementCache.find(x=>x.id===id);
-  if(type==="staff")item=staffCache.find(x=>x.id===id);
-  if(type==="gallery")item=galleryCache.find(x=>x.id===id);
-  if(!item)return;
+async function updateAuth(user){
+  currentUser = user;
 
-  if(type==="news"){
-    $("newsId").value=item.id;$("newsTitle").value=item.title||"";
-    $("newsExcerpt").value=item.excerpt||"";$("newsContent").value=item.content||"";
-    $("newsPublished").checked=!!item.is_published;
-    document.querySelector('[data-tab="tabNews"]').click();
+  const authBox = document.getElementById("commentAuth");
+  const form = document.getElementById("commentForm");
+
+  if(user){
+    authBox.innerHTML = `
+      <p class="status">
+        Login sebagai ${esc(user.email)}.
+        <button onclick="visitorLogout()"
+          style="border:0;background:none;color:#08714a;font-weight:800">
+          Keluar
+        </button>
+      </p>
+    `;
+    form.classList.remove("hidden");
+  }else{
+    authBox.innerHTML = `
+      <button class="btn btn-gold" onclick="googleLogin()">
+        Masuk dengan Google
+      </button>
+    `;
+    form.classList.add("hidden");
   }
-  if(type==="announcement"){
-    $("announcementId").value=item.id;$("announcementTitle").value=item.title||"";
-    $("announcementContent").value=item.content||"";
-    $("announcementPublished").checked=!!item.is_published;
-    document.querySelector('[data-tab="tabAnnouncements"]').click();
-  }
-  if(type==="staff"){
-    $("staffId").value=item.id;$("staffName").value=item.full_name||"";
-    $("staffPosition").value=item.position||"";$("staffBio").value=item.bio||"";
-    $("staffPublished").checked=!!item.is_published;
-    document.querySelector('[data-tab="tabStaff"]').click();
-  }
-  if(type==="gallery"){
-    $("galleryId").value=item.id;$("galleryTitle").value=item.title||"";
-    $("galleryDescription").value=item.description||"";
-    $("galleryPublished").checked=!!item.is_published;
-    document.querySelector('[data-tab="tabGallery"]').click();
-  }
-  $("adminArea").scrollIntoView({behavior:"smooth"});
 }
 
-async function deleteItem(type,id){
-  if(!confirm("Yakin ingin menghapus data ini?"))return;
-  let table,cache;
-  if(type==="news"){table="news";cache=newsCache;}
-  if(type==="announcement"){table="announcements";cache=announcementCache;}
-  if(type==="staff"){table="staff";cache=staffCache;}
-  if(type==="gallery"){table="gallery";cache=galleryCache;}
-  const item=cache.find(x=>x.id===id);
-  const {error}=await supabase.from(table).delete().eq("id",id);
-  if(error){showNotice("adminNotice","Gagal menghapus: "+error.message,"error");return;}
-  if(type==="gallery"&&item?.image_path)await deleteStoredImage(item.image_path);
-  if(type==="news"&&item?.cover_path)await deleteStoredImage(item.cover_path);
-  if(type==="staff"&&item?.photo_path)await deleteStoredImage(item.photo_path);
-  showNotice("adminNotice","Data berhasil dihapus.","success");
-  await loadAdminLists();await loadPublicContent();
+async function visitorLogout(){
+  await db.auth.signOut();
+}
+
+db.auth.onAuthStateChange((_event,session)=>{
+  updateAuth(session?.user || null);
+});
+
+db.auth.getSession().then(({data})=>{
+  updateAuth(data.session?.user || null);
+});
+
+document.getElementById("commentForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  if(!currentUser){
+    setStatus("commentStatus","Silakan login Google terlebih dahulu.");
+    return;
+  }
+
+  const content = document.getElementById("commentText").value.trim();
+  if(!content) return;
+
+  setStatus("commentStatus","Mengirim komentar...");
+
+  const name =
+    currentUser.user_metadata?.full_name ||
+    currentUser.user_metadata?.name ||
+    currentUser.email;
+
+  const {error} = await db.from("comments").insert({
+    user_id:currentUser.id,
+    name,
+    content,
+    status:"pending"
+  });
+
+  if(error){
+    setStatus("commentStatus","Komentar gagal dikirim: " + error.message);
+    return;
+  }
+
+  e.target.reset();
+  setStatus("commentStatus","Komentar terkirim dan menunggu persetujuan admin.");
+});
+
+// ==========================================
+// LOGIN DAN HAK AKSES ADMIN
+// ==========================================
+async function checkAdmin(user){
+  if(!user) return false;
+
+  const {data,error} = await db.from("user_roles")
+    .select("role")
+    .eq("user_id",user.id)
+    .maybeSingle();
+
+  if(error){
+    setStatus("loginStatus","Gagal memeriksa hak admin: " + error.message);
+    return false;
+  }
+
+  return !!data &&
+    ["yayasan_admin","mts_admin"].includes(data.role);
+}
+
+async function refreshAdmin(){
+  const {data:{user}} = await db.auth.getUser();
+  currentUser = user;
+
+  const allowed = await checkAdmin(user);
+
+  document.getElementById("adminLogin").classList.toggle("hidden",allowed);
+  document.getElementById("adminArea").classList.toggle("hidden",!allowed);
+
+  document.getElementById("adminWho").textContent =
+    allowed ? "Login: " + user.email : "";
+
+  if(allowed) await loadAdminLists();
+}
+
+document.getElementById("loginForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  setStatus("loginStatus","Memeriksa akun...");
+
+  const {error} = await db.auth.signInWithPassword({
+    email:document.getElementById("adminEmail").value,
+    password:document.getElementById("adminPassword").value
+  });
+
+  if(error){
+    setStatus("loginStatus","Login gagal: " + error.message);
+    return;
+  }
+
+  await refreshAdmin();
+});
+
+async function adminLogout(){
+  await db.auth.signOut();
+  await refreshAdmin();
+  setStatus("loginStatus","Anda sudah keluar.");
+}
+
+// ==========================================
+// TAB PANEL ADMIN
+// ==========================================
+document.querySelectorAll(".admin-tabs button").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".admin-tabs button")
+      .forEach(b=>b.classList.remove("active"));
+
+    document.querySelectorAll(".admin-pane")
+      .forEach(p=>p.classList.remove("active"));
+
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.pane).classList.add("active");
+  });
+});
+
+// ==========================================
+// DAFTAR DATA PADA PANEL ADMIN
+// ==========================================
+async function loadAdminLists(){
+  await Promise.all([
+    adminList("news","adminNewsList","title"),
+    adminList("announcements","adminAnnouncementList","title"),
+    adminList("staff","adminStaffList","full_name"),
+    adminList("gallery","adminGalleryList","title"),
+    adminComments()
+  ]);
+}
+
+async function adminList(table,target,label){
+  const {data,error} = await db.from(table)
+    .select("id," + label + ",is_published")
+    .order("created_at",{ascending:false})
+    .limit(30);
+
+  const el = document.getElementById(target);
+
+  if(error){
+    el.innerHTML = `<p class="status">Gagal memuat: ${esc(error.message)}</p>`;
+    return;
+  }
+
+  el.innerHTML = (data || []).map(r=>`
+    <div class="admin-row">
+      <span>${esc(r[label])} — ${r.is_published ? "Tayang" : "Draft"}</span>
+      <button onclick="deleteRecord('${table}','${r.id}')">Hapus</button>
+    </div>
+  `).join("") || "<p class='status'>Belum ada data.</p>";
+}
+
+async function deleteRecord(table,id){
+  if(!confirm("Yakin ingin menghapus data ini?")) return;
+
+  const {error} = await db.from(table).delete().eq("id",id);
+
+  if(error){
+    alert("Gagal menghapus: " + error.message);
+    return;
+  }
+
+  await loadAdminLists();
+  await loadPublic();
+}
+
+// ==========================================
+// SIMPAN BERITA
+// ==========================================
+document.getElementById("newsForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  try{
+    setStatus("newsStatus","Menyimpan berita...");
+
+    const title = document.getElementById("newsTitle").value.trim();
+    const file = document.getElementById("newsImage").files[0];
+    const cover_path = await uploadImage(file,"berita");
+    const is_published = document.getElementById("newsPublished").checked;
+
+    const {error} = await db.from("news").insert({
+      title,
+      slug:slugify(title),
+      excerpt:document.getElementById("newsExcerpt").value,
+      content:document.getElementById("newsContent").value,
+      cover_path,
+      is_published,
+      published_at:is_published ? new Date().toISOString() : null,
+      created_by:currentUser.id
+    });
+
+    if(error) throw error;
+
+    e.target.reset();
+    setStatus("newsStatus","Berita berhasil disimpan.");
+
+    await loadAdminLists();
+    await loadPublic();
+
+  }catch(err){
+    setStatus("newsStatus","Gagal: " + err.message);
+  }
+});
+
+// ==========================================
+// SIMPAN PENGUMUMAN
+// ==========================================
+document.getElementById("announcementForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  try{
+    setStatus("announcementStatus","Menyimpan pengumuman...");
+
+    const {error} = await db.from("announcements").insert({
+      title:document.getElementById("announcementTitle").value,
+      content:document.getElementById("announcementContent").value,
+      is_published:document.getElementById("announcementPublished").checked,
+      created_by:currentUser.id
+    });
+
+    if(error) throw error;
+
+    e.target.reset();
+    setStatus("announcementStatus","Pengumuman berhasil disimpan.");
+
+    await loadAdminLists();
+    await loadPublic();
+
+  }catch(err){
+    setStatus("announcementStatus","Gagal: " + err.message);
+  }
+});
+
+// ==========================================
+// SIMPAN DATA GURU
+// ==========================================
+document.getElementById("staffForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  try{
+    setStatus("staffStatus","Menyimpan data guru...");
+
+    const photo_path = await uploadImage(
+      document.getElementById("staffImage").files[0],
+      "guru"
+    );
+
+    const {error} = await db.from("staff").insert({
+      full_name:document.getElementById("staffName").value,
+      position:document.getElementById("staffPosition").value,
+      bio:document.getElementById("staffBio").value,
+      photo_path,
+      is_published:document.getElementById("staffPublished").checked
+    });
+
+    if(error) throw error;
+
+    e.target.reset();
+    setStatus("staffStatus","Data guru berhasil disimpan.");
+
+    await loadAdminLists();
+    await loadPublic();
+
+  }catch(err){
+    setStatus("staffStatus","Gagal: " + err.message);
+  }
+});
+
+// ==========================================
+// SIMPAN GALERI / DOKUMENTASI
+// ==========================================
+document.getElementById("galleryForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  try{
+    setStatus("galleryStatus","Mengunggah dokumentasi...");
+
+    const image_path = await uploadImage(
+      document.getElementById("galleryImage").files[0],
+      "galeri"
+    );
+
+    const {error} = await db.from("gallery").insert({
+      title:document.getElementById("galleryTitle").value,
+      description:document.getElementById("galleryDescription").value,
+      image_path,
+      is_published:document.getElementById("galleryPublished").checked,
+      created_by:currentUser.id
+    });
+
+    if(error) throw error;
+
+    e.target.reset();
+    setStatus("galleryStatus","Dokumentasi berhasil diunggah.");
+
+    await loadAdminLists();
+    await loadPublic();
+
+  }catch(err){
+    setStatus("galleryStatus","Gagal: " + err.message);
+  }
+});
+
+// ==========================================
+// MODERASI KOMENTAR
+// ==========================================
+async function adminComments(){
+  const el = document.getElementById("adminCommentsList");
+
+  const {data,error} = await db.from("comments")
+    .select("id,name,content,created_at")
+    .eq("status","pending")
+    .order("created_at",{ascending:false});
+
+  if(error){
+    el.innerHTML = `<p class="status">Gagal memuat komentar: ${esc(error.message)}</p>`;
+    return;
+  }
+
+  el.innerHTML = (data || []).map(r=>`
+    <div class="admin-row">
+      <div>
+        <strong>${esc(r.name)}</strong>
+        <p>${esc(r.content)}</p>
+      </div>
+      <div>
+        <button style="background:#e5f3e8;color:#17643a"
+          onclick="moderateComment('${r.id}','approved')">Setujui</button>
+        <button onclick="moderateComment('${r.id}','rejected')">Tolak</button>
+      </div>
+    </div>
+  `).join("") || "<p class='status'>Tidak ada komentar yang menunggu persetujuan.</p>";
 }
 
 async function moderateComment(id,status){
-  const {error}=await supabase.from("comments").update({status}).eq("id",id);
-  if(error){showNotice("adminNotice","Gagal memperbarui komentar: "+error.message,"error");return;}
-  await loadAdminLists();await loadComments();
+  const {error} = await db.from("comments")
+    .update({status})
+    .eq("id",id);
+
+  if(error){
+    setStatus("moderationStatus","Gagal: " + error.message);
+    return;
+  }
+
+  setStatus("moderationStatus","Status komentar diperbarui.");
+
+  await adminComments();
+  await loadPublic();
 }
 
-async function deleteComment(id){
-  if(!confirm("Hapus komentar ini secara permanen?"))return;
-  const {error}=await supabase.from("comments").delete().eq("id",id);
-  if(error){showNotice("adminNotice","Gagal menghapus komentar: "+error.message,"error");return;}
-  await loadAdminLists();await loadComments();
-}
-
-/* SIMPAN BERITA */
-$("newsForm").addEventListener("submit",async event=>{
-  event.preventDefault();
-  if(!currentAdmin)return;
-  try{
-    const id=$("newsId").value;
-    const title=$("newsTitle").value.trim();
-    const file=$("newsCover").files[0];
-    const old=newsCache.find(x=>x.id===id);
-    let cover_path=old?.cover_path||null;
-    if(file)cover_path=await uploadImage(file,"berita");
-    const payload={
-      title,slug:slugify(title)+"-"+Date.now(),
-      excerpt:$("newsExcerpt").value.trim(),
-      content:$("newsContent").value.trim(),
-      cover_path,is_published:$("newsPublished").checked,
-      published_at:$("newsPublished").checked?new Date().toISOString():null
-    };
-    const result=id
-      ?await supabase.from("news").update(payload).eq("id",id)
-      :await supabase.from("news").insert({...payload,created_by:currentUser.id});
-    if(result.error)throw result.error;
-    if(file&&old?.cover_path)await deleteStoredImage(old.cover_path);
-    resetForm("newsForm");showNotice("adminNotice","Berita berhasil disimpan.","success");
-    await loadAdminLists();await loadPublicContent();
-  }catch(error){showNotice("adminNotice","Gagal menyimpan berita: "+error.message,"error");}
+// ==========================================
+// JALANKAN WEBSITE
+// ==========================================
+loadPublic().catch(err=>{
+  console.error("Gagal memuat konten:",err);
 });
 
-/* SIMPAN PENGUMUMAN */
-$("announcementForm").addEventListener("submit",async event=>{
-  event.preventDefault();
-  if(!currentAdmin)return;
-  const id=$("announcementId").value;
-  const payload={
-    title:$("announcementTitle").value.trim(),
-    content:$("announcementContent").value.trim(),
-    is_published:$("announcementPublished").checked
-  };
-  const result=id
-    ?await supabase.from("announcements").update(payload).eq("id",id)
-    :await supabase.from("announcements").insert({...payload,created_by:currentUser.id});
-  if(result.error){showNotice("adminNotice","Gagal menyimpan pengumuman: "+result.error.message,"error");return;}
-  resetForm("announcementForm");showNotice("adminNotice","Pengumuman berhasil disimpan.","success");
-  await loadAdminLists();await loadPublicContent();
+db.auth.getSession().then(()=>{
+  refreshAdmin();
 });
-
-/* SIMPAN GURU / STAF */
-$("staffForm").addEventListener("submit",async event=>{
-  event.preventDefault();
-  if(!currentAdmin)return;
-  try{
-    const id=$("staffId").value;
-    const old=staffCache.find(x=>x.id===id);
-    const file=$("staffPhoto").files[0];
-    let photo_path=old?.photo_path||null;
-    if(file)photo_path=await uploadImage(file,"guru");
-    const payload={
-      full_name:$("staffName").value.trim(),
-      position:$("staffPosition").value.trim(),
-      bio:$("staffBio").value.trim(),
-      photo_path,is_published:$("staffPublished").checked
-    };
-    const result=id
-      ?await supabase.from("staff").update(payload).eq("id",id)
-      :await supabase.from("staff").insert(payload);
-    if(result.error)throw result.error;
-    if(file&&old?.photo_path)await deleteStoredImage(old.photo_path);
-    resetForm("staffForm");showNotice("adminNotice","Data guru/staf berhasil disimpan.","success");
-    await loadAdminLists();await loadPublicContent();
-  }catch(error){showNotice("adminNotice","Gagal menyimpan data guru: "+error.message,"error");}
-});
-
-/* SIMPAN GALERI */
-$("galleryForm").addEventListener("submit",async event=>{
-  event.preventDefault();
-  if(!currentAdmin)return;
-  try{
-    const id=$("galleryId").value;
-    const old=galleryCache.find(x=>x.id===id);
-    const file=$("galleryImage").files[0];
-    if(!id&&!file)throw new Error("Pilih foto kegiatan terlebih dahulu.");
-    let image_path=old?.image_path||null;
-    if(file)image_path=await uploadImage(file,"galeri");
-    const payload={
-      title:$("galleryTitle").value.trim(),
-      description:$("galleryDescription").value.trim(),
-      image_path,is_published:$("galleryPublished").checked
-    };
-    const result=id
-      ?await supabase.from("gallery").update(payload).eq("id",id)
-      :await supabase.from("gallery").insert({...payload,created_by:currentUser.id});
-    if(result.error)throw result.error;
-    if(file&&old?.image_path)await deleteStoredImage(old.image_path);
-    resetForm("galleryForm");showNotice("adminNotice","Dokumentasi berhasil disimpan.","success");
-    await loadAdminLists();await loadPublicContent();
-  }catch(error){showNotice("adminNotice","Gagal menyimpan dokumentasi: "+error.message,"error");}
-});
-
-/* TOMBOL KEMBALI KE ATAS */
-const topButton=$("topButton");
-window.addEventListener("scroll",()=>{
-  topButton.style.display=window.scrollY>300?"block":"none";
-});
-topButton.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
-
-/* TAMPILKAN AREA ADMIN SAAT MENU ADMIN DIKLIK */
-$("adminMenuLink").addEventListener("click",async()=>{
-  $("adminArea").style.display="block";
-  await checkAdmin();
-});
-
-/* MULAI APLIKASI */
-await refreshVisitor();
-await checkAdmin();
-await loadPublicContent();
 </script>
 
 </body>
