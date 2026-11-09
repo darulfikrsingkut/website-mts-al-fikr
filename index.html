@@ -1,13 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Website resmi MTs Al-Fikr Cianjur Singkut, Kabupaten Sarolangun. Membangun generasi berilmu, beriman, dan berakhlakul karimah.">
+<meta name="description" content="Website resmi MTs Al-Fikr Cianjur Singkut, Kabupaten Sarolangun.">
 <meta name="theme-color" content="#075638">
-
 <title>MTs Al-Fikr Cianjur Singkut</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,636 +18,136 @@
   --hijau-muda:#138451;
   --emas:#d8b451;
   --emas-muda:#f3dfa0;
-  --putih:#ffffff;
+  --putih:#fff;
   --teks:#26382f;
   --abu:#64746b;
   --latar:#f5f9f6;
   --garis:#e3ece5;
   --bayangan:0 10px 30px rgba(0,50,30,.09);
 }
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:85px;
-}
-
-body{
-  font-family:'Poppins',Arial,sans-serif;
-  color:var(--teks);
-  background:var(--latar);
-  line-height:1.7;
-}
-
-a{
-  text-decoration:none;
-}
-
-/* HEADER */
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'Poppins',Arial,sans-serif;color:var(--teks);background:var(--latar);line-height:1.7}
+a{text-decoration:none}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
 header{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 90% 20%,rgba(255,255,255,.10),transparent 25%),
-    linear-gradient(115deg,var(--hijau-tua),var(--hijau),#087044);
-  color:white;
-  padding:20px 7%;
-  display:flex;
-  align-items:center;
-  gap:17px;
-  border-bottom:4px solid var(--emas);
+ position:relative;overflow:hidden;background:
+ radial-gradient(circle at 90% 20%,rgba(255,255,255,.10),transparent 25%),
+ linear-gradient(115deg,var(--hijau-tua),var(--hijau),#087044);
+ color:white;padding:20px 7%;display:flex;align-items:center;gap:17px;
+ border-bottom:4px solid var(--emas)
 }
-
-header::after{
-  content:"";
-  position:absolute;
-  width:220px;
-  height:220px;
-  right:8%;
-  top:-145px;
-  border:1px solid rgba(255,255,255,.13);
-  transform:rotate(45deg);
-  pointer-events:none;
-}
-
-.logo{
-  flex-shrink:0;
-  width:78px;
-  height:78px;
-  border:3px solid var(--emas);
-  border-radius:50%;
-  background:#ffffff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  padding:5px;
-  box-shadow:0 5px 15px rgba(0,0,0,.18);
-}
-
-.logo img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-}
-
-.header-text{
-  position:relative;
-  z-index:1;
-}
-
-.header-text h2{
-  font-size:22px;
-  font-weight:800;
-  letter-spacing:.5px;
-  line-height:1.4;
-}
-
-.header-text p{
-  font-size:12px;
-  color:var(--emas-muda);
-  letter-spacing:1.2px;
-  font-weight:500;
-}
-
-/* NAVIGASI */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(4,61,41,.97);
-  backdrop-filter:blur(10px);
-  padding:0 7%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:5px;
-  flex-wrap:wrap;
-  box-shadow:0 4px 15px rgba(0,0,0,.12);
-}
-
-nav a{
-  color:white;
-  padding:15px 13px;
-  font-size:12px;
-  font-weight:600;
-  transition:.25s;
-  border-bottom:3px solid transparent;
-}
-
-nav a:hover{
-  color:var(--emas-muda);
-  background:rgba(255,255,255,.07);
-  border-bottom-color:var(--emas);
-}
-
-/* HERO */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-  min-height:440px;
-  padding:90px 8%;
-  color:white;
-  background:
-    radial-gradient(circle at 85% 30%,rgba(231,190,89,.18),transparent 25%),
-    radial-gradient(circle at 10% 90%,rgba(255,255,255,.09),transparent 28%),
-    linear-gradient(120deg,#043d29,#087447 60%,#15915b);
-}
-
-.hero::before,
-.hero::after{
-  content:"";
-  position:absolute;
-  width:240px;
-  height:240px;
-  border:1px solid rgba(255,255,255,.12);
-  transform:rotate(45deg);
-  pointer-events:none;
-}
-
-.hero::before{
-  right:-90px;
-  top:30px;
-}
-
-.hero::after{
-  right:70px;
-  bottom:-190px;
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:760px;
-}
-
-.hero small{
-  display:inline-block;
-  color:var(--emas-muda);
-  font-weight:700;
-  letter-spacing:2px;
-  font-size:12px;
-  padding:7px 13px;
-  border:1px solid rgba(243,223,160,.45);
-  border-radius:30px;
-  background:rgba(255,255,255,.07);
-}
-
-.hero h1{
-  font-size:43px;
-  max-width:700px;
-  line-height:1.25;
-  margin:22px 0 15px;
-  font-weight:800;
-  text-shadow:0 3px 12px rgba(0,0,0,.15);
-}
-
-.hero p{
-  max-width:620px;
-  color:#eef8f0;
-  font-size:15px;
-  margin-bottom:28px;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-block;
-  background:linear-gradient(135deg,#f1d17c,#d5ad45);
-  color:#263b2d;
-  padding:12px 23px;
-  border-radius:8px;
-  font-size:13px;
-  font-weight:700;
-  box-shadow:0 5px 15px rgba(0,0,0,.13);
-  transition:.25s;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 20px rgba(0,0,0,.2);
-}
-
-.btn-outline{
-  background:transparent;
-  color:white;
-  border:1px solid rgba(255,255,255,.65);
-  box-shadow:none;
-}
-
-.btn-outline:hover{
-  background:rgba(255,255,255,.12);
-}
-
-/* INFORMASI SINGKAT */
-
-.highlight{
-  position:relative;
-  z-index:5;
-  max-width:1100px;
-  margin:-35px auto 0;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.highlight-item{
-  background:white;
-  padding:20px 15px;
-  border-radius:12px;
-  text-align:center;
-  box-shadow:var(--bayangan);
-  border-bottom:3px solid var(--emas);
-}
-
-.highlight-item strong{
-  display:block;
-  color:var(--hijau);
-  font-size:23px;
-  font-weight:800;
-}
-
-.highlight-item span{
-  color:var(--abu);
-  font-size:12px;
-  font-weight:600;
-}
-
-/* SECTION UMUM */
-
-section{
-  padding:65px 7%;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:35px;
-}
-
-.section-title small{
-  color:#a27b23;
-  letter-spacing:2px;
-  font-size:11px;
-  font-weight:700;
-}
-
-.section-title h2{
-  color:var(--hijau);
-  font-size:29px;
-  font-weight:800;
-  margin:5px 0;
-}
-
-.section-title p{
-  color:var(--abu);
-  font-size:13px;
-}
-
-.about{
-  background:
-    radial-gradient(circle at 5% 10%,rgba(216,180,81,.08),transparent 25%),
-    linear-gradient(135deg,#edf6ef,#f8fbf8);
-}
-
-/* KARTU */
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
-}
-
-.card{
-  position:relative;
-  background:white;
-  padding:27px;
-  border-radius:13px;
-  box-shadow:var(--bayangan);
-  border:1px solid var(--garis);
-  border-bottom:4px solid var(--emas);
-  transition:transform .25s,box-shadow .25s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 35px rgba(0,50,30,.13);
-}
-
-.card h3{
-  color:var(--hijau);
-  font-size:17px;
-  font-weight:700;
-  margin-bottom:10px;
-}
-
-.card p{
-  color:#53665b;
-  font-size:13px;
-  line-height:1.9;
-  margin-bottom:7px;
-}
-
-.card-icon{
-  width:45px;
-  height:45px;
-  display:grid;
-  place-items:center;
-  border-radius:12px;
-  background:linear-gradient(135deg,#e2f1e6,#fff4d7);
-  color:var(--hijau);
-  font-size:21px;
-  margin-bottom:16px;
-}
-
-/* PROFIL */
-
-.profile-card{
-  max-width:950px;
-  margin:auto;
-}
-
-.profile-card h3{
-  font-size:20px;
-}
-
-.profile-label{
-  display:inline-block;
-  margin-top:14px;
-  padding:5px 12px;
-  color:#725719;
-  background:#fff5d9;
-  border-radius:30px;
-  font-size:11px;
-  font-weight:700;
-}
-
-/* BERITA */
-
-.news-placeholder{
-  text-align:center;
-  padding:35px 20px;
-}
-
-.news-placeholder .card-icon{
-  margin:0 auto 15px;
-}
-
-/* GALERI */
-
-.gallery-placeholder{
-  text-align:center;
-  padding:35px 20px;
-  border:2px dashed #c9d9ce;
-  border-radius:13px;
-  background:rgba(255,255,255,.7);
-}
-
-.gallery-placeholder .card-icon{
-  margin:0 auto 15px;
-}
-
-/* PPDB */
-
-.ppdb-box{
-  max-width:850px;
-  margin:auto;
-  text-align:center;
-  background:linear-gradient(120deg,#075638,#11804d);
-  color:white;
-  padding:40px 25px;
-  border-radius:17px;
-  border:2px solid var(--emas);
-  box-shadow:var(--bayangan);
-}
-
-.ppdb-box h3{
-  font-size:23px;
-  margin-bottom:10px;
-}
-
-.ppdb-box p{
-  font-size:13px;
-  color:#e9f4ec;
-  margin-bottom:20px;
-}
-
-/* KONTAK */
-
-.contact-card{
-  max-width:850px;
-  margin:auto;
-}
-
-.contact-card p{
-  padding:7px 0;
-}
-
-/* LINK YAYASAN */
-
-.foundation-link{
-  text-align:center;
-  padding:25px 15px;
-  background:#fff9e9;
-  border-top:1px solid #efdfb2;
-}
-
-.foundation-link p{
-  color:#675b3c;
-  font-size:12px;
-  margin-bottom:8px;
-}
-
-.foundation-link a{
-  color:var(--hijau);
-  font-weight:700;
-  font-size:13px;
-}
-
-.foundation-link a:hover{
-  color:#a27b23;
-}
-
-/* FOOTER */
-
-footer{
-  background:
-    radial-gradient(circle at 90% 0%,rgba(255,255,255,.08),transparent 25%),
-    linear-gradient(120deg,#043d29,#075638);
-  color:white;
-  text-align:center;
-  padding:30px 15px;
-  border-top:4px solid var(--emas);
-}
-
-footer p{
-  font-size:12px;
-  margin:4px 0;
-  color:#e1eee5;
-}
-
-footer strong{
-  color:var(--emas-muda);
-}
-
-/* TOMBOL KEMBALI KE ATAS */
-
-#topButton{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:43px;
-  height:43px;
-  border:0;
-  border-radius:50%;
-  background:var(--emas);
-  color:var(--hijau-tua);
-  font-size:20px;
-  font-weight:bold;
-  cursor:pointer;
-  box-shadow:0 4px 15px rgba(0,0,0,.2);
-  display:none;
-  z-index:999;
-}
-
-#topButton:hover{
-  background:#f0d27d;
-  transform:translateY(-3px);
-}
-
-/* RESPONSIVE HP */
-
+header::after{content:"";position:absolute;width:220px;height:220px;right:8%;top:-145px;border:1px solid rgba(255,255,255,.13);transform:rotate(45deg)}
+.logo{flex-shrink:0;width:78px;height:78px;border:3px solid var(--emas);border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:5px;box-shadow:0 5px 15px rgba(0,0,0,.18)}
+.logo img{width:100%;height:100%;object-fit:contain}
+.header-text{position:relative;z-index:1}
+.header-text h2{font-size:22px;font-weight:800;letter-spacing:.5px;line-height:1.4}
+.header-text p{font-size:12px;color:var(--emas-muda);letter-spacing:1.2px;font-weight:500}
+nav{position:sticky;top:0;z-index:1000;background:rgba(4,61,41,.97);backdrop-filter:blur(10px);padding:0 5%;display:flex;align-items:center;justify-content:center;gap:3px;flex-wrap:wrap;box-shadow:0 4px 15px rgba(0,0,0,.12)}
+nav a{color:white;padding:14px 10px;font-size:11px;font-weight:600;transition:.25s;border-bottom:3px solid transparent}
+nav a:hover{color:var(--emas-muda);background:rgba(255,255,255,.07);border-bottom-color:var(--emas)}
+.hero{position:relative;overflow:hidden;min-height:440px;padding:90px 8%;color:white;background:radial-gradient(circle at 85% 30%,rgba(231,190,89,.18),transparent 25%),radial-gradient(circle at 10% 90%,rgba(255,255,255,.09),transparent 28%),linear-gradient(120deg,#043d29,#087447 60%,#15915b)}
+.hero::before,.hero::after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(255,255,255,.12);transform:rotate(45deg)}
+.hero::before{right:-90px;top:30px}.hero::after{right:70px;bottom:-190px}
+.hero-content{position:relative;z-index:2;max-width:760px}
+.hero small{display:inline-block;color:var(--emas-muda);font-weight:700;letter-spacing:2px;font-size:12px;padding:7px 13px;border:1px solid rgba(243,223,160,.45);border-radius:30px;background:rgba(255,255,255,.07)}
+.hero h1{font-size:43px;max-width:700px;line-height:1.25;margin:22px 0 15px;font-weight:800}
+.hero p{max-width:620px;color:#eef8f0;font-size:15px;margin-bottom:28px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;border:0;background:linear-gradient(135deg,#f1d17c,#d5ad45);color:#263b2d;padding:11px 21px;border-radius:8px;font-size:13px;font-weight:700;box-shadow:0 5px 15px rgba(0,0,0,.13);transition:.25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-outline{background:transparent;color:white;border:1px solid rgba(255,255,255,.65);box-shadow:none}
+.highlight{position:relative;z-index:5;max-width:1100px;margin:-35px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.highlight-item{background:white;padding:20px 15px;border-radius:12px;text-align:center;box-shadow:var(--bayangan);border-bottom:3px solid var(--emas)}
+.highlight-item strong{display:block;color:var(--hijau);font-size:23px;font-weight:800}
+.highlight-item span{color:var(--abu);font-size:12px;font-weight:600}
+section{padding:65px 7%}
+.about{background:radial-gradient(circle at 5% 10%,rgba(216,180,81,.08),transparent 25%),linear-gradient(135deg,#edf6ef,#f8fbf8)}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title small{color:#a27b23;letter-spacing:2px;font-size:11px;font-weight:700}
+.section-title h2{color:var(--hijau);font-size:29px;font-weight:800;margin:5px 0}
+.section-title p{color:var(--abu);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{position:relative;background:white;padding:25px;border-radius:13px;box-shadow:var(--bayangan);border:1px solid var(--garis);border-bottom:4px solid var(--emas);transition:.25s;min-width:0}
+.card:hover{transform:translateY(-3px)}
+.card h3{color:var(--hijau);font-size:17px;margin-bottom:10px}
+.card p{color:#53665b;font-size:13px;line-height:1.9;margin-bottom:7px;overflow-wrap:anywhere}
+.card-icon{width:45px;height:45px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#e2f1e6,#fff4d7);color:var(--hijau);font-size:21px;margin-bottom:16px}
+.profile-card{max-width:950px;margin:auto}
+.profile-label{display:inline-block;margin-top:14px;padding:5px 12px;color:#725719;background:#fff5d9;border-radius:30px;font-size:11px;font-weight:700}
+.ppdb-box{max-width:850px;margin:auto;text-align:center;background:linear-gradient(120deg,#075638,#11804d);color:white;padding:40px 25px;border-radius:17px;border:2px solid var(--emas);box-shadow:var(--bayangan)}
+.ppdb-box h3{font-size:23px;margin-bottom:10px}
+.ppdb-box p{font-size:13px;color:#e9f4ec;margin-bottom:20px}
+.contact-card{max-width:850px;margin:auto}
+.contact-card p{padding:7px 0}
+.foundation-link{text-align:center;padding:25px 15px;background:#fff9e9;border-top:1px solid #efdfb2}
+.foundation-link p{color:#675b3c;font-size:12px;margin-bottom:8px}
+.foundation-link a{color:var(--hijau);font-weight:700;font-size:13px}
+footer{background:radial-gradient(circle at 90% 0%,rgba(255,255,255,.08),transparent 25%),linear-gradient(120deg,#043d29,#075638);color:white;text-align:center;padding:30px 15px;border-top:4px solid var(--emas)}
+footer p{font-size:12px;margin:4px 0;color:#e1eee5}
+footer strong{color:var(--emas-muda)}
+.item-image{width:100%;height:190px;object-fit:cover;border-radius:9px;margin-bottom:13px;background:#edf4ef}
+.empty-state{text-align:center;padding:30px 15px;border:2px dashed #c9d9ce;border-radius:13px;background:rgba(255,255,255,.7);color:var(--abu);font-size:13px}
+.empty-state .card-icon{margin:0 auto 12px}
+.date-text{font-size:11px!important;color:#8b968e!important}
+.content-detail{white-space:pre-wrap}
+.comment-box{max-width:850px;margin:auto}
+.comment-form{display:grid;gap:12px;margin:18px 0 25px}
+.field{display:grid;gap:5px}
+.field label{font-size:12px;font-weight:700;color:var(--hijau)}
+.field input,.field textarea,.field select{width:100%;padding:11px 12px;border:1px solid #cbdacf;border-radius:8px;background:white;color:var(--teks);font-size:13px;outline:none}
+.field input:focus,.field textarea:focus{border-color:var(--hijau-muda);box-shadow:0 0 0 3px rgba(19,132,81,.1)}
+.field textarea{min-height:100px;resize:vertical}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.check-line{display:flex;align-items:center;gap:8px;font-size:12px}
+.check-line input{width:auto}
+.action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.small-btn{border:0;padding:7px 11px;border-radius:6px;font-size:11px;font-weight:700;background:#e8f2eb;color:var(--hijau)}
+.small-btn.danger{background:#ffebeb;color:#a12a2a}
+.small-btn.gold{background:#fff3d4;color:#745718}
+.admin-area{display:none;background:#edf5ef;border-top:3px solid var(--emas)}
+.admin-box{max-width:1100px;margin:auto}
+.admin-login,.admin-dashboard{background:white;border:1px solid var(--garis);border-radius:13px;padding:25px;box-shadow:var(--bayangan)}
+.admin-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}
+.admin-tabs button{border:1px solid #cbdacf;background:#f5faf6;padding:9px 13px;border-radius:7px;color:var(--hijau);font-size:12px;font-weight:700}
+.admin-tabs button.active{background:var(--hijau);color:white}
+.admin-panel{display:none}
+.admin-panel.active{display:block}
+.admin-list{display:grid;gap:10px;margin-top:18px}
+.admin-list-item{padding:13px;border:1px solid var(--garis);border-radius:9px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.admin-list-item strong{color:var(--hijau);font-size:13px}
+.admin-list-item small{display:block;color:var(--abu);font-size:11px}
+.notice{padding:11px 13px;border-radius:8px;font-size:12px;margin:12px 0;display:none}
+.notice.error{display:block;background:#fff0f0;color:#a12a2a}
+.notice.success{display:block;background:#eaf7ed;color:#17633b}
+.signed-in{font-size:12px;color:var(--abu);margin-bottom:12px}
+#topButton{position:fixed;right:20px;bottom:20px;width:43px;height:43px;border:0;border-radius:50%;background:var(--emas);color:var(--hijau-tua);font-size:20px;font-weight:bold;display:none;z-index:999;box-shadow:0 4px 15px rgba(0,0,0,.2)}
 @media(max-width:700px){
-
-  header{
-    padding:16px 5%;
-    gap:12px;
-  }
-
-  .logo{
-    width:65px;
-    height:65px;
-  }
-
-  .header-text h2{
-    font-size:16px;
-  }
-
-  .header-text p{
-    font-size:10px;
-    letter-spacing:.5px;
-  }
-
-  nav{
-    justify-content:flex-start;
-    gap:0;
-    padding:5px 3%;
-  }
-
-  nav a{
-    padding:10px 9px;
-    font-size:11px;
-  }
-
-  .hero{
-    min-height:390px;
-    padding:65px 7%;
-  }
-
-  .hero h1{
-    font-size:32px;
-  }
-
-  .hero p{
-    font-size:13px;
-  }
-
-  .highlight{
-    grid-template-columns:1fr;
-    margin:-20px 15px 0;
-    padding:0;
-    gap:10px;
-  }
-
-  .highlight-item{
-    padding:13px;
-  }
-
-  .highlight-item strong{
-    font-size:20px;
-  }
-
-  section{
-    padding:48px 6%;
-  }
-
-  .section-title h2{
-    font-size:24px;
-  }
-
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .card{
-    padding:22px;
-  }
-
-  .ppdb-box h3{
-    font-size:20px;
-  }
-}
-
-@media(min-width:701px) and (max-width:950px){
-  nav{
-    gap:0;
-  }
-
-  nav a{
-    padding:13px 9px;
-  }
-
-  .hero h1{
-    font-size:37px;
-  }
+ header{padding:16px 5%;gap:12px}.logo{width:65px;height:65px}
+ .header-text h2{font-size:16px}.header-text p{font-size:9px;letter-spacing:.4px}
+ nav{justify-content:flex-start;gap:0;padding:5px 3%}nav a{padding:10px 8px;font-size:10px}
+ .hero{min-height:390px;padding:65px 7%}.hero h1{font-size:32px}.hero p{font-size:13px}
+ .highlight{grid-template-columns:1fr;margin:-20px 15px 0;padding:0;gap:10px}
+ .highlight-item{padding:13px}.highlight-item strong{font-size:20px}
+ section{padding:48px 6%}.section-title h2{font-size:24px}
+ .cards{grid-template-columns:1fr}.card{padding:22px}.ppdb-box h3{font-size:20px}
+ .form-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-
   <div class="logo">
-    <img
-      src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png"
-      alt="Logo MTs Al-Fikr Cianjur Singkut"
-    >
+    <img src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png" alt="Logo MTs Al-Fikr">
   </div>
-
   <div class="header-text">
     <h2>MTs AL-FIKR CIANJUR SINGKUT</h2>
     <p>CIANJUR SINGKUT · KABUPATEN SAROLANGUN</p>
   </div>
-
 </header>
-
-<!-- NAVIGASI -->
 
 <nav>
   <a href="#beranda">Beranda</a>
@@ -659,308 +156,863 @@ footer strong{
   <a href="#berita">Berita</a>
   <a href="#pengumuman">Pengumuman</a>
   <a href="#galeri">Galeri</a>
+  <a href="#komentar">Komentar</a>
   <a href="#ppdb">PPDB</a>
   <a href="#kontak">Kontak</a>
+  <a href="#adminArea" id="adminMenuLink">Admin</a>
 </nav>
-
-<!-- BERANDA -->
 
 <div class="hero" id="beranda">
   <div class="hero-content">
-
     <small>SELAMAT DATANG DI WEBSITE RESMI</small>
-
     <h1>MTs Al-Fikr Cianjur Singkut</h1>
-
-    <p>
-      Membangun generasi berilmu, beriman, berakhlakul karimah,
-      dan siap menghadapi masa depan.
-    </p>
-
+    <p>Membangun generasi berilmu, beriman, berakhlakul karimah, dan siap menghadapi masa depan.</p>
     <div class="hero-buttons">
       <a class="btn" href="#profil">Jelajahi Madrasah</a>
       <a class="btn btn-outline" href="#ppdb">Informasi PPDB</a>
     </div>
-
   </div>
 </div>
-
-<!-- INFORMASI SINGKAT -->
 
 <div class="highlight">
-
-  <div class="highlight-item">
-    <strong>2011</strong>
-    <span>Tahun Berdiri</span>
-  </div>
-
-  <div class="highlight-item">
-    <strong>MTs</strong>
-    <span>Jenjang Pendidikan</span>
-  </div>
-
-  <div class="highlight-item">
-    <strong>Darul Fikr</strong>
-    <span>Di bawah Naungan Yayasan</span>
-  </div>
-
+  <div class="highlight-item"><strong>2011</strong><span>Tahun Berdiri</span></div>
+  <div class="highlight-item"><strong>MTs</strong><span>Jenjang Pendidikan</span></div>
+  <div class="highlight-item"><strong>Darul Fikr</strong><span>Di bawah Naungan Yayasan</span></div>
 </div>
 
-<!-- PROFIL -->
-
 <section class="about" id="profil">
-
   <div class="section-title">
     <small>MENGENAL MADRASAH</small>
     <h2>Profil Madrasah</h2>
     <p>Mengenal lebih dekat MTs Al-Fikr Cianjur Singkut</p>
   </div>
-
   <div class="card profile-card">
-
     <div class="card-icon">🏫</div>
-
     <h3>MTs Al-Fikr Cianjur Singkut</h3>
-
-    <p>
-      MTs Al-Fikr Cianjur Singkut merupakan lembaga pendidikan
-      tingkat Madrasah Tsanawiyah yang berada di bawah naungan
-      Yayasan Darul Fikr Singkut.
-    </p>
-
-    <p>
-      Madrasah ini berdiri sejak tahun 2011 sebagai bagian dari
-      upaya menghadirkan pendidikan yang memadukan ilmu pengetahuan,
-      nilai-nilai keislaman, pembinaan karakter, dan akhlakul karimah.
-    </p>
-
-    <p>
-      Informasi lebih lengkap mengenai sejarah, visi, misi,
-      tujuan, dan identitas madrasah akan dilengkapi oleh pengelola.
-    </p>
-
+    <p>MTs Al-Fikr Cianjur Singkut merupakan lembaga pendidikan tingkat Madrasah Tsanawiyah yang berada di bawah naungan Yayasan Darul Fikr Singkut.</p>
+    <p>Madrasah ini berdiri sejak tahun 2011 sebagai bagian dari upaya menghadirkan pendidikan yang memadukan ilmu pengetahuan, nilai-nilai keislaman, pembinaan karakter, dan akhlakul karimah.</p>
+    <p>Informasi lebih lengkap mengenai sejarah, visi, misi, tujuan, dan identitas madrasah akan dilengkapi oleh pengelola.</p>
     <span class="profile-label">Berdiri Tahun 2011</span>
-
   </div>
-
 </section>
 
-<!-- GURU -->
-
 <section id="guru">
-
   <div class="section-title">
     <small>SUMBER DAYA MANUSIA</small>
     <h2>Guru dan Tenaga Kependidikan</h2>
     <p>Mengenal tenaga pendidik dan kependidikan madrasah</p>
   </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="card-icon">👨‍🏫</div>
-      <h3>Tenaga Pendidik</h3>
-      <p>
-        Informasi nama, foto, mata pelajaran, dan profil guru
-        akan ditampilkan di bagian ini.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="card-icon">📋</div>
-      <h3>Tenaga Kependidikan</h3>
-      <p>
-        Informasi staf tata usaha dan tenaga kependidikan
-        madrasah akan ditampilkan di bagian ini.
-      </p>
-    </div>
-
+  <div class="cards" id="staffContainer">
+    <div class="empty-state">Memuat data guru dan tenaga kependidikan...</div>
   </div>
-
 </section>
 
-<!-- BERITA -->
-
 <section class="about" id="berita">
-
   <div class="section-title">
     <small>INFORMASI TERKINI</small>
     <h2>Berita dan Kegiatan</h2>
     <p>Informasi terbaru seputar aktivitas MTs Al-Fikr</p>
   </div>
-
-  <div class="card news-placeholder">
-
-    <div class="card-icon">📰</div>
-
-    <h3>Berita Madrasah</h3>
-
-    <p>
-      Berita, artikel, prestasi siswa, kegiatan pembelajaran,
-      dan dokumentasi aktivitas madrasah akan ditampilkan
-      di bagian ini.
-    </p>
-
-    <span class="profile-label">Konten berita akan diperbarui</span>
-
+  <div class="cards" id="newsContainer">
+    <div class="empty-state">Memuat berita...</div>
   </div>
-
 </section>
 
-<!-- PENGUMUMAN -->
-
 <section id="pengumuman">
-
   <div class="section-title">
     <small>INFORMASI PENTING</small>
     <h2>Pengumuman</h2>
     <p>Informasi dan pemberitahuan resmi madrasah</p>
   </div>
-
-  <div class="card">
-
-    <div class="card-icon">📢</div>
-
-    <h3>Pengumuman Madrasah</h3>
-
-    <p>
-      Belum ada pengumuman terbaru.
-      Informasi resmi madrasah akan disampaikan melalui bagian ini.
-    </p>
-
+  <div class="cards" id="announcementContainer">
+    <div class="empty-state">Memuat pengumuman...</div>
   </div>
-
 </section>
 
-<!-- GALERI -->
-
 <section class="about" id="galeri">
-
   <div class="section-title">
     <small>DOKUMENTASI</small>
     <h2>Galeri Madrasah</h2>
     <p>Mengabadikan kegiatan dan aktivitas MTs Al-Fikr</p>
   </div>
-
-  <div class="gallery-placeholder">
-
-    <div class="card-icon">📷</div>
-
-    <h3>Dokumentasi Kegiatan</h3>
-
-    <p>
-      Foto kegiatan belajar mengajar, kegiatan keagamaan,
-      perlombaan, peringatan hari besar Islam, dan aktivitas
-      madrasah lainnya akan ditampilkan di sini.
-    </p>
-
+  <div class="cards" id="galleryContainer">
+    <div class="empty-state">Memuat dokumentasi...</div>
   </div>
-
 </section>
 
-<!-- PPDB -->
+<section id="komentar">
+  <div class="section-title">
+    <small>ASPIRASI DAN SARAN</small>
+    <h2>Komentar Pengunjung</h2>
+    <p>Silakan sampaikan saran dan masukan untuk madrasah</p>
+  </div>
+  <div class="card comment-box">
+    <div id="visitorAuthArea">
+      <p id="visitorIdentity" class="signed-in">Silakan masuk dengan akun Google untuk mengirim komentar.</p>
+      <button class="btn" id="googleLoginButton" type="button">Masuk dengan Google</button>
+      <button class="small-btn" id="visitorLogoutButton" type="button" style="display:none">Keluar</button>
+    </div>
+    <div class="comment-form" id="commentForm" style="display:none">
+      <div class="field">
+        <label for="commentContent">Komentar atau saran</label>
+        <textarea id="commentContent" maxlength="1500" placeholder="Tuliskan komentar atau saran Anda..."></textarea>
+      </div>
+      <button class="btn" id="sendCommentButton" type="button">Kirim Komentar</button>
+      <p class="date-text">Komentar akan ditampilkan setelah mendapat persetujuan admin.</p>
+    </div>
+    <div id="commentNotice" class="notice"></div>
+    <h3 style="color:var(--hijau);font-size:16px;margin:20px 0 12px">Komentar yang telah disetujui</h3>
+    <div id="commentsContainer"><div class="empty-state">Memuat komentar...</div></div>
+  </div>
+</section>
 
 <section id="ppdb">
-
   <div class="section-title">
     <small>PENERIMAAN SISWA BARU</small>
     <h2>Penerimaan Peserta Didik Baru</h2>
     <p>Bergabung dan tumbuh bersama MTs Al-Fikr Cianjur Singkut</p>
   </div>
-
   <div class="ppdb-box">
-
     <h3>Informasi PPDB MTs Al-Fikr</h3>
-
-    <p>
-      Informasi persyaratan, jadwal pendaftaran,
-      prosedur penerimaan, dan ketentuan lainnya
-      akan diumumkan melalui halaman ini.
-    </p>
-
+    <p>Informasi persyaratan, jadwal pendaftaran, prosedur penerimaan, dan ketentuan lainnya akan diumumkan melalui halaman ini.</p>
     <a class="btn" href="#kontak">Hubungi Madrasah</a>
-
   </div>
-
 </section>
 
-<!-- KONTAK -->
-
 <section class="about" id="kontak">
-
   <div class="section-title">
     <small>INFORMASI DAN LAYANAN</small>
     <h2>Hubungi Kami</h2>
     <p>Informasi lebih lanjut mengenai MTs Al-Fikr Cianjur Singkut</p>
   </div>
-
   <div class="card contact-card">
-
     <div class="card-icon">📍</div>
-
     <h3>MTs Al-Fikr Cianjur Singkut</h3>
-
     <p><strong>Alamat:</strong> Cianjur Singkut, Kabupaten Sarolangun</p>
-
     <p><strong>Yayasan:</strong> Yayasan Darul Fikr Singkut</p>
-
     <p><strong>Informasi:</strong> Kontak madrasah akan dilengkapi kemudian.</p>
-
   </div>
-
 </section>
 
-<!-- TAUTAN YAYASAN -->
+<!-- AREA LOGIN DAN DASHBOARD ADMIN -->
+<section class="admin-area" id="adminArea">
+  <div class="section-title">
+    <small>PENGELOLA WEBSITE</small>
+    <h2>Panel Admin MTs Al-Fikr</h2>
+    <p>Pengelolaan berita, pengumuman, guru, dokumentasi, dan komentar</p>
+  </div>
+
+  <div class="admin-box">
+    <div class="admin-login" id="adminLoginBox">
+      <h3 style="color:var(--hijau);margin-bottom:12px">Login Administrator</h3>
+      <p style="font-size:12px;color:var(--abu);margin-bottom:15px">Gunakan email dan kata sandi akun admin yang telah didaftarkan di Supabase.</p>
+      <div class="comment-form">
+        <div class="field">
+          <label for="adminEmail">Email admin</label>
+          <input type="email" id="adminEmail" autocomplete="username" placeholder="Email administrator">
+        </div>
+        <div class="field">
+          <label for="adminPassword">Kata sandi</label>
+          <input type="password" id="adminPassword" autocomplete="current-password" placeholder="Kata sandi">
+        </div>
+        <button class="btn" id="adminLoginButton" type="button">Login Admin</button>
+      </div>
+      <div id="adminLoginNotice" class="notice"></div>
+    </div>
+
+    <div class="admin-dashboard" id="adminDashboard" style="display:none">
+      <p class="signed-in" id="adminIdentity"></p>
+      <button class="small-btn danger" id="adminLogoutButton" type="button">Keluar dari Panel Admin</button>
+
+      <div class="admin-tabs">
+        <button class="active" data-tab="tabNews">Berita</button>
+        <button data-tab="tabAnnouncements">Pengumuman</button>
+        <button data-tab="tabStaff">Guru/Staf</button>
+        <button data-tab="tabGallery">Galeri</button>
+        <button data-tab="tabComments">Komentar</button>
+      </div>
+
+      <!-- FORM BERITA -->
+      <div class="admin-panel active" id="tabNews">
+        <h3 style="color:var(--hijau)">Kelola Berita</h3>
+        <form id="newsForm" class="comment-form">
+          <input type="hidden" id="newsId">
+          <div class="field"><label>Judul berita</label><input id="newsTitle" required maxlength="180"></div>
+          <div class="field"><label>Ringkasan berita</label><textarea id="newsExcerpt" required maxlength="500"></textarea></div>
+          <div class="field"><label>Isi berita</label><textarea id="newsContent" required style="min-height:150px"></textarea></div>
+          <div class="field"><label>Foto sampul (opsional)</label><input type="file" id="newsCover" accept="image/*"></div>
+          <label class="check-line"><input type="checkbox" id="newsPublished" checked> Terbitkan berita</label>
+          <div class="action-row">
+            <button class="btn" type="submit">Simpan Berita</button>
+            <button class="small-btn" type="button" onclick="resetForm('newsForm')">Kosongkan Form</button>
+          </div>
+        </form>
+        <div id="newsAdminList" class="admin-list"></div>
+      </div>
+
+      <!-- FORM PENGUMUMAN -->
+      <div class="admin-panel" id="tabAnnouncements">
+        <h3 style="color:var(--hijau)">Kelola Pengumuman</h3>
+        <form id="announcementForm" class="comment-form">
+          <input type="hidden" id="announcementId">
+          <div class="field"><label>Judul pengumuman</label><input id="announcementTitle" required maxlength="180"></div>
+          <div class="field"><label>Isi pengumuman</label><textarea id="announcementContent" required></textarea></div>
+          <label class="check-line"><input type="checkbox" id="announcementPublished" checked> Terbitkan pengumuman</label>
+          <div class="action-row">
+            <button class="btn" type="submit">Simpan Pengumuman</button>
+            <button class="small-btn" type="button" onclick="resetForm('announcementForm')">Kosongkan Form</button>
+          </div>
+        </form>
+        <div id="announcementAdminList" class="admin-list"></div>
+      </div>
+
+      <!-- FORM GURU -->
+      <div class="admin-panel" id="tabStaff">
+        <h3 style="color:var(--hijau)">Kelola Guru dan Tenaga Kependidikan</h3>
+        <form id="staffForm" class="comment-form">
+          <input type="hidden" id="staffId">
+          <div class="form-grid">
+            <div class="field"><label>Nama lengkap</label><input id="staffName" required maxlength="150"></div>
+            <div class="field"><label>Jabatan / Mata Pelajaran</label><input id="staffPosition" required maxlength="150"></div>
+          </div>
+          <div class="field"><label>Profil singkat</label><textarea id="staffBio"></textarea></div>
+          <div class="field"><label>Foto guru/staf (opsional)</label><input type="file" id="staffPhoto" accept="image/*"></div>
+          <label class="check-line"><input type="checkbox" id="staffPublished" checked> Tampilkan di website</label>
+          <div class="action-row">
+            <button class="btn" type="submit">Simpan Data</button>
+            <button class="small-btn" type="button" onclick="resetForm('staffForm')">Kosongkan Form</button>
+          </div>
+        </form>
+        <div id="staffAdminList" class="admin-list"></div>
+      </div>
+
+      <!-- FORM GALERI -->
+      <div class="admin-panel" id="tabGallery">
+        <h3 style="color:var(--hijau)">Kelola Dokumentasi Galeri</h3>
+        <form id="galleryForm" class="comment-form">
+          <input type="hidden" id="galleryId">
+          <div class="field"><label>Judul kegiatan</label><input id="galleryTitle" required maxlength="180"></div>
+          <div class="field"><label>Keterangan</label><textarea id="galleryDescription"></textarea></div>
+          <div class="field"><label>Foto kegiatan</label><input type="file" id="galleryImage" accept="image/*"></div>
+          <label class="check-line"><input type="checkbox" id="galleryPublished" checked> Tampilkan di website</label>
+          <div class="action-row">
+            <button class="btn" type="submit">Simpan Dokumentasi</button>
+            <button class="small-btn" type="button" onclick="resetForm('galleryForm')">Kosongkan Form</button>
+          </div>
+          <p class="date-text">Foto wajib dipilih saat menambahkan dokumentasi baru. Saat mengedit, foto lama dapat dipertahankan.</p>
+        </form>
+        <div id="galleryAdminList" class="admin-list"></div>
+      </div>
+
+      <!-- MODERASI KOMENTAR -->
+      <div class="admin-panel" id="tabComments">
+        <h3 style="color:var(--hijau)">Moderasi Komentar Pengunjung</h3>
+        <p class="date-text">Setujui komentar agar tampil di halaman publik. Komentar yang tidak sesuai dapat dihapus.</p>
+        <div id="commentsAdminList" class="admin-list"></div>
+      </div>
+
+      <div id="adminNotice" class="notice"></div>
+    </div>
+  </div>
+</section>
 
 <div class="foundation-link">
-
   <p>MTs Al-Fikr Cianjur Singkut merupakan bagian dari</p>
-
-  <a href="https://website-darul-fikr-singkut.pages.dev" target="_blank" rel="noopener">
-    YAYASAN DARUL FIKR SINGKUT
-  </a>
-
+  <a href="https://website-darul-fikr-singkut.pages.dev" target="_blank" rel="noopener">YAYASAN DARUL FIKR SINGKUT</a>
 </div>
 
-<!-- FOOTER -->
-
 <footer>
-
   <p><strong>MTs AL-FIKR CIANJUR SINGKUT</strong></p>
-
   <p>Membangun Generasi Berilmu, Beriman, dan Berakhlakul Karimah</p>
-
   <p>© 2026 MTs Al-Fikr Cianjur Singkut</p>
-
   <p>Bagian dari Yayasan Darul Fikr Singkut</p>
-
 </footer>
 
-<!-- TOMBOL KEMBALI KE ATAS -->
+<button id="topButton" aria-label="Kembali ke atas">↑</button>
 
-<button id="topButton" onclick="kembaliKeAtas()" aria-label="Kembali ke atas">
-  ↑
-</button>
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
-<script>
-const topButton = document.getElementById("topButton");
+/* KONFIGURASI SUPABASE */
+const SUPABASE_URL = "https://mzsvtofwppivatofehzq.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_tF7XksRKXIeiQcZvlAauXw_NxRKaLLA";
+const BUCKET = "dokumentasi-mts";
 
-window.addEventListener("scroll", function(){
-  if(window.scrollY > 300){
-    topButton.style.display = "block";
-  }else{
-    topButton.style.display = "none";
+const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+let currentUser = null;
+let currentAdmin = false;
+let newsCache = [];
+let announcementCache = [];
+let staffCache = [];
+let galleryCache = [];
+let commentCache = [];
+
+const $ = id => document.getElementById(id);
+
+function escapeHTML(value=""){
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+  })[char]);
+}
+
+function showNotice(id,message,type="success"){
+  const el = $(id);
+  if(!el) return;
+  el.textContent = message;
+  el.className = "notice " + type;
+}
+
+function clearNotice(id){
+  const el = $(id);
+  if(el){el.textContent="";el.className="notice";}
+}
+
+function formatDate(value){
+  if(!value) return "";
+  return new Date(value).toLocaleDateString("id-ID",{
+    day:"numeric",month:"long",year:"numeric"
+  });
+}
+
+function slugify(value){
+  return value.toLowerCase().trim()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-|-$/g,"");
+}
+
+function resetForm(formId){
+  const form = $(formId);
+  if(form) form.reset();
+  const hidden = form?.querySelector('input[type="hidden"]');
+  if(hidden) hidden.value="";
+}
+
+window.resetForm = resetForm;
+
+/* FOTO STORAGE: BUCKET PRIVATE, URL BERTANDA TANGAN */
+async function imageUrl(path){
+  if(!path) return "";
+  const {data,error} = await supabase.storage
+    .from(BUCKET)
+    .createSignedUrl(path,3600);
+  if(error){
+    console.warn("Gagal membuat URL foto:",error.message);
+    return "";
+  }
+  return data.signedUrl;
+}
+
+async function uploadImage(file,folder){
+  if(!file) return null;
+  if(!file.type.startsWith("image/")) throw new Error("File yang dipilih harus berupa gambar.");
+  if(file.size > 5*1024*1024) throw new Error("Ukuran foto maksimal 5 MB.");
+  const extension = file.name.split(".").pop().toLowerCase().replace(/[^a-z0-9]/g,"") || "jpg";
+  const path = `${folder}/${Date.now()}-${crypto.randomUUID()}.${extension}`;
+  const {error} = await supabase.storage.from(BUCKET).upload(path,file,{
+    cacheControl:"3600",upsert:false,contentType:file.type
+  });
+  if(error) throw error;
+  return path;
+}
+
+async function deleteStoredImage(path){
+  if(!path) return;
+  const {error} = await supabase.storage.from(BUCKET).remove([path]);
+  if(error) console.warn("Foto tidak terhapus dari penyimpanan:",error.message);
+}
+
+/* MEMUAT KONTEN PUBLIK */
+async function loadStaff(){
+  const {data,error} = await supabase.from("staff")
+    .select("*").eq("is_published",true).order("sort_order",{ascending:true});
+  const box = $("staffContainer");
+  if(error){box.innerHTML='<div class="empty-state">Data guru belum dapat dimuat.</div>';return;}
+  staffCache=data||[];
+  if(!staffCache.length){box.innerHTML='<div class="empty-state">Data guru dan tenaga kependidikan belum ditambahkan.</div>';return;}
+  box.innerHTML="";
+  for(const item of staffCache){
+    const photo=await imageUrl(item.photo_path);
+    box.insertAdjacentHTML("beforeend",`
+      <article class="card">
+        ${photo?`<img class="item-image" src="${photo}" alt="${escapeHTML(item.full_name)}">`:'<div class="card-icon">👨‍🏫</div>'}
+        <h3>${escapeHTML(item.full_name)}</h3>
+        <p><strong>${escapeHTML(item.position||"")}</strong></p>
+        <p>${escapeHTML(item.bio||"")}</p>
+      </article>`);
+  }
+}
+
+async function loadNews(){
+  const {data,error}=await supabase.from("news")
+    .select("*").eq("is_published",true).order("published_at",{ascending:false});
+  const box=$("newsContainer");
+  if(error){box.innerHTML='<div class="empty-state">Berita belum dapat dimuat.</div>';return;}
+  newsCache=data||[];
+  if(!newsCache.length){box.innerHTML='<div class="empty-state">Belum ada berita yang diterbitkan.</div>';return;}
+  box.innerHTML="";
+  for(const item of newsCache){
+    const photo=await imageUrl(item.cover_path);
+    box.insertAdjacentHTML("beforeend",`
+      <article class="card">
+        ${photo?`<img class="item-image" src="${photo}" alt="${escapeHTML(item.title)}">`:'<div class="card-icon">📰</div>'}
+        <p class="date-text">${formatDate(item.published_at||item.created_at)}</p>
+        <h3>${escapeHTML(item.title)}</h3>
+        <p>${escapeHTML(item.excerpt||"")}</p>
+        <button class="small-btn" data-read-news="${escapeHTML(item.id)}">Baca selengkapnya</button>
+      </article>`);
+  }
+  box.querySelectorAll("[data-read-news]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      const item=newsCache.find(x=>x.id===button.dataset.readNews);
+      if(!item)return;
+      alert(item.title+"\n\n"+(item.content||""));
+    });
+  });
+}
+
+async function loadAnnouncements(){
+  const {data,error}=await supabase.from("announcements")
+    .select("*").eq("is_published",true).order("created_at",{ascending:false});
+  const box=$("announcementContainer");
+  if(error){box.innerHTML='<div class="empty-state">Pengumuman belum dapat dimuat.</div>';return;}
+  announcementCache=data||[];
+  if(!announcementCache.length){box.innerHTML='<div class="empty-state">Belum ada pengumuman terbaru.</div>';return;}
+  box.innerHTML="";
+  announcementCache.forEach(item=>{
+    box.insertAdjacentHTML("beforeend",`
+      <article class="card">
+        <div class="card-icon">📢</div>
+        <p class="date-text">${formatDate(item.created_at)}</p>
+        <h3>${escapeHTML(item.title)}</h3>
+        <p class="content-detail">${escapeHTML(item.content||"")}</p>
+      </article>`);
+  });
+}
+
+async function loadGallery(){
+  const {data,error}=await supabase.from("gallery")
+    .select("*").eq("is_published",true).order("created_at",{ascending:false});
+  const box=$("galleryContainer");
+  if(error){box.innerHTML='<div class="empty-state">Galeri belum dapat dimuat.</div>';return;}
+  galleryCache=data||[];
+  if(!galleryCache.length){box.innerHTML='<div class="empty-state"><div class="card-icon">📷</div>Belum ada dokumentasi kegiatan.</div>';return;}
+  box.innerHTML="";
+  for(const item of galleryCache){
+    const photo=await imageUrl(item.image_path);
+    box.insertAdjacentHTML("beforeend",`
+      <article class="card">
+        ${photo?`<img class="item-image" src="${photo}" alt="${escapeHTML(item.title)}">`:'<div class="card-icon">📷</div>'}
+        <h3>${escapeHTML(item.title)}</h3>
+        <p>${escapeHTML(item.description||"")}</p>
+        <p class="date-text">${formatDate(item.created_at)}</p>
+      </article>`);
+  }
+}
+
+async function loadComments(){
+  const {data,error}=await supabase.from("comments")
+    .select("*").eq("status","approved").order("created_at",{ascending:false});
+  const box=$("commentsContainer");
+  if(error){box.innerHTML='<div class="empty-state">Komentar belum dapat dimuat.</div>';return;}
+  if(!data?.length){box.innerHTML='<div class="empty-state">Belum ada komentar yang ditampilkan.</div>';return;}
+  box.innerHTML="";
+  data.forEach(item=>{
+    box.insertAdjacentHTML("beforeend",`
+      <div style="padding:13px 0;border-bottom:1px solid var(--garis)">
+        <strong style="font-size:13px;color:var(--hijau)">${escapeHTML(item.name||"Pengunjung")}</strong>
+        <p style="font-size:13px;white-space:pre-wrap">${escapeHTML(item.content)}</p>
+        <p class="date-text">${formatDate(item.created_at)}</p>
+      </div>`);
+  });
+}
+
+async function loadPublicContent(){
+  await Promise.all([
+    loadStaff(),loadNews(),loadAnnouncements(),loadGallery(),loadComments()
+  ]);
+}
+
+/* LOGIN PENGUNJUNG GOOGLE */
+$("googleLoginButton").addEventListener("click",async()=>{
+  clearNotice("commentNotice");
+  const {error}=await supabase.auth.signInWithOAuth({
+    provider:"google",
+    options:{redirectTo:window.location.origin}
+  });
+  if(error) showNotice("commentNotice","Login Google gagal: "+error.message,"error");
+});
+
+$("visitorLogoutButton").addEventListener("click",async()=>{
+  await supabase.auth.signOut();
+});
+
+async function refreshVisitor(){
+  const {data:{user}}=await supabase.auth.getUser();
+  currentUser=user;
+  $("googleLoginButton").style.display=user?"none":"inline-block";
+  $("visitorLogoutButton").style.display=user?"inline-block":"none";
+  $("commentForm").style.display=user?"grid":"none";
+  $("visitorIdentity").textContent=user
+    ? "Masuk sebagai "+(user.user_metadata?.full_name||user.email)
+    : "Silakan masuk dengan akun Google untuk mengirim komentar.";
+}
+
+$("sendCommentButton").addEventListener("click",async()=>{
+  clearNotice("commentNotice");
+  const content=$("commentContent").value.trim();
+  if(!currentUser){showNotice("commentNotice","Silakan login dengan Google terlebih dahulu.","error");return;}
+  if(content.length<3){showNotice("commentNotice","Komentar terlalu pendek.","error");return;}
+  $("sendCommentButton").disabled=true;
+  const name=currentUser.user_metadata?.full_name||currentUser.user_metadata?.name||currentUser.email;
+  const {error}=await supabase.from("comments").insert({
+    user_id:currentUser.id,name,content,status:"pending"
+  });
+  $("sendCommentButton").disabled=false;
+  if(error){showNotice("commentNotice","Komentar gagal dikirim: "+error.message,"error");return;}
+  $("commentContent").value="";
+  showNotice("commentNotice","Komentar berhasil dikirim dan menunggu persetujuan admin.","success");
+});
+
+/* LOGIN ADMIN DAN PEMERIKSAAN HAK AKSES */
+async function checkAdmin(){
+  const {data:{user}}=await supabase.auth.getUser();
+  currentUser=user;
+  currentAdmin=false;
+  if(!user){
+    showAdminLoggedOut();
+    return;
+  }
+  const {data,error}=await supabase.from("user_roles")
+    .select("role").eq("user_id",user.id).maybeSingle();
+
+  if(error || !data || !["yayasan_admin","mts_admin"].includes(data.role)){
+    showAdminLoggedOut();
+    return;
+  }
+
+  currentAdmin=true;
+  $("adminLoginBox").style.display="none";
+  $("adminDashboard").style.display="block";
+  $("adminIdentity").textContent="Administrator: "+user.email+" | Hak akses: "+data.role;
+  await loadAdminLists();
+}
+
+function showAdminLoggedOut(){
+  $("adminLoginBox").style.display="block";
+  $("adminDashboard").style.display="none";
+}
+
+$("adminLoginButton").addEventListener("click",async()=>{
+  clearNotice("adminLoginNotice");
+  const email=$("adminEmail").value.trim();
+  const password=$("adminPassword").value;
+  if(!email||!password){showNotice("adminLoginNotice","Isi email dan kata sandi terlebih dahulu.","error");return;}
+  $("adminLoginButton").disabled=true;
+  const {error}=await supabase.auth.signInWithPassword({email,password});
+  $("adminLoginButton").disabled=false;
+  if(error){showNotice("adminLoginNotice","Login gagal: "+error.message,"error");return;}
+  await checkAdmin();
+  if(!currentAdmin){
+    await supabase.auth.signOut();
+    showNotice("adminLoginNotice","Akun berhasil masuk, tetapi belum memiliki hak admin. Hubungi pengelola Supabase.","error");
   }
 });
 
-function kembaliKeAtas(){
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
+$("adminLogoutButton").addEventListener("click",async()=>{
+  await supabase.auth.signOut();
+});
+
+supabase.auth.onAuthStateChange(()=>{
+  setTimeout(async()=>{
+    await refreshVisitor();
+    await checkAdmin();
+  },0);
+});
+
+/* NAVIGASI TAB ADMIN */
+document.querySelectorAll(".admin-tabs button").forEach(button=>{
+  button.addEventListener("click",()=>{
+    document.querySelectorAll(".admin-tabs button").forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll(".admin-panel").forEach(x=>x.classList.remove("active"));
+    button.classList.add("active");
+    $(button.dataset.tab).classList.add("active");
+  });
+});
+
+/* DAFTAR DATA ADMIN */
+async function loadAdminLists(){
+  if(!currentAdmin)return;
+  const results=await Promise.all([
+    supabase.from("news").select("*").order("created_at",{ascending:false}),
+    supabase.from("announcements").select("*").order("created_at",{ascending:false}),
+    supabase.from("staff").select("*").order("sort_order",{ascending:true}),
+    supabase.from("gallery").select("*").order("created_at",{ascending:false}),
+    supabase.from("comments").select("*").order("created_at",{ascending:false})
+  ]);
+
+  const [n,a,s,g,c]=results;
+  if(n.error||a.error||s.error||g.error||c.error){
+    showNotice("adminNotice","Sebagian data admin gagal dimuat. Periksa kebijakan akses Supabase.","error");
+  }
+
+  newsCache=n.data||[];
+  announcementCache=a.data||[];
+  staffCache=s.data||[];
+  galleryCache=g.data||[];
+  commentCache=c.data||[];
+
+  renderAdminList("newsAdminList",newsCache,"title","news");
+  renderAdminList("announcementAdminList",announcementCache,"title","announcement");
+  renderAdminList("staffAdminList",staffCache,"full_name","staff");
+  renderAdminList("galleryAdminList",galleryCache,"title","gallery");
+  renderCommentsAdmin();
+}
+
+function renderAdminList(containerId,items,label,type){
+  const box=$(containerId);
+  if(!items.length){box.innerHTML='<div class="empty-state">Belum ada data.</div>';return;}
+  box.innerHTML="";
+  items.forEach(item=>{
+    const published=item.is_published;
+    const row=document.createElement("div");
+    row.className="admin-list-item";
+    const title=document.createElement("div");
+    const strong=document.createElement("strong");
+    strong.textContent=item[label]||"(Tanpa judul)";
+    const small=document.createElement("small");
+    small.textContent=published?"Status: Terbit / Tampil":"Status: Draft / Disembunyikan";
+    title.append(strong,small);
+    const actions=document.createElement("div");
+    actions.className="action-row";
+    const edit=document.createElement("button");
+    edit.className="small-btn gold";edit.textContent="Edit";
+    edit.addEventListener("click",()=>editItem(type,item.id));
+    const del=document.createElement("button");
+    del.className="small-btn danger";del.textContent="Hapus";
+    del.addEventListener("click",()=>deleteItem(type,item.id));
+    actions.append(edit,del);
+    row.append(title,actions);
+    box.append(row);
   });
 }
+
+function renderCommentsAdmin(){
+  const box=$("commentsAdminList");
+  if(!commentCache.length){box.innerHTML='<div class="empty-state">Belum ada komentar.</div>';return;}
+  box.innerHTML="";
+  commentCache.forEach(item=>{
+    const row=document.createElement("div");
+    row.className="admin-list-item";
+    const info=document.createElement("div");
+    const strong=document.createElement("strong");
+    strong.textContent=item.name||"Pengunjung";
+    const p=document.createElement("p");
+    p.style.fontSize="12px";p.style.whiteSpace="pre-wrap";p.textContent=item.content;
+    const small=document.createElement("small");
+    small.textContent="Status: "+item.status+" | "+formatDate(item.created_at);
+    info.append(strong,p,small);
+    const actions=document.createElement("div");
+    actions.className="action-row";
+    if(item.status!=="approved"){
+      const approve=document.createElement("button");
+      approve.className="small-btn";approve.textContent="Setujui";
+      approve.addEventListener("click",()=>moderateComment(item.id,"approved"));
+      actions.append(approve);
+    }
+    const reject=document.createElement("button");
+    reject.className="small-btn gold";reject.textContent="Tolak";
+    reject.addEventListener("click",()=>moderateComment(item.id,"rejected"));
+    const del=document.createElement("button");
+    del.className="small-btn danger";del.textContent="Hapus";
+    del.addEventListener("click",()=>deleteComment(item.id));
+    actions.append(reject,del);
+    row.append(info,actions);
+    box.append(row);
+  });
+}
+
+function editItem(type,id){
+  let item;
+  if(type==="news")item=newsCache.find(x=>x.id===id);
+  if(type==="announcement")item=announcementCache.find(x=>x.id===id);
+  if(type==="staff")item=staffCache.find(x=>x.id===id);
+  if(type==="gallery")item=galleryCache.find(x=>x.id===id);
+  if(!item)return;
+
+  if(type==="news"){
+    $("newsId").value=item.id;$("newsTitle").value=item.title||"";
+    $("newsExcerpt").value=item.excerpt||"";$("newsContent").value=item.content||"";
+    $("newsPublished").checked=!!item.is_published;
+    document.querySelector('[data-tab="tabNews"]').click();
+  }
+  if(type==="announcement"){
+    $("announcementId").value=item.id;$("announcementTitle").value=item.title||"";
+    $("announcementContent").value=item.content||"";
+    $("announcementPublished").checked=!!item.is_published;
+    document.querySelector('[data-tab="tabAnnouncements"]').click();
+  }
+  if(type==="staff"){
+    $("staffId").value=item.id;$("staffName").value=item.full_name||"";
+    $("staffPosition").value=item.position||"";$("staffBio").value=item.bio||"";
+    $("staffPublished").checked=!!item.is_published;
+    document.querySelector('[data-tab="tabStaff"]').click();
+  }
+  if(type==="gallery"){
+    $("galleryId").value=item.id;$("galleryTitle").value=item.title||"";
+    $("galleryDescription").value=item.description||"";
+    $("galleryPublished").checked=!!item.is_published;
+    document.querySelector('[data-tab="tabGallery"]').click();
+  }
+  $("adminArea").scrollIntoView({behavior:"smooth"});
+}
+
+async function deleteItem(type,id){
+  if(!confirm("Yakin ingin menghapus data ini?"))return;
+  let table,cache;
+  if(type==="news"){table="news";cache=newsCache;}
+  if(type==="announcement"){table="announcements";cache=announcementCache;}
+  if(type==="staff"){table="staff";cache=staffCache;}
+  if(type==="gallery"){table="gallery";cache=galleryCache;}
+  const item=cache.find(x=>x.id===id);
+  const {error}=await supabase.from(table).delete().eq("id",id);
+  if(error){showNotice("adminNotice","Gagal menghapus: "+error.message,"error");return;}
+  if(type==="gallery"&&item?.image_path)await deleteStoredImage(item.image_path);
+  if(type==="news"&&item?.cover_path)await deleteStoredImage(item.cover_path);
+  if(type==="staff"&&item?.photo_path)await deleteStoredImage(item.photo_path);
+  showNotice("adminNotice","Data berhasil dihapus.","success");
+  await loadAdminLists();await loadPublicContent();
+}
+
+async function moderateComment(id,status){
+  const {error}=await supabase.from("comments").update({status}).eq("id",id);
+  if(error){showNotice("adminNotice","Gagal memperbarui komentar: "+error.message,"error");return;}
+  await loadAdminLists();await loadComments();
+}
+
+async function deleteComment(id){
+  if(!confirm("Hapus komentar ini secara permanen?"))return;
+  const {error}=await supabase.from("comments").delete().eq("id",id);
+  if(error){showNotice("adminNotice","Gagal menghapus komentar: "+error.message,"error");return;}
+  await loadAdminLists();await loadComments();
+}
+
+/* SIMPAN BERITA */
+$("newsForm").addEventListener("submit",async event=>{
+  event.preventDefault();
+  if(!currentAdmin)return;
+  try{
+    const id=$("newsId").value;
+    const title=$("newsTitle").value.trim();
+    const file=$("newsCover").files[0];
+    const old=newsCache.find(x=>x.id===id);
+    let cover_path=old?.cover_path||null;
+    if(file)cover_path=await uploadImage(file,"berita");
+    const payload={
+      title,slug:slugify(title)+"-"+Date.now(),
+      excerpt:$("newsExcerpt").value.trim(),
+      content:$("newsContent").value.trim(),
+      cover_path,is_published:$("newsPublished").checked,
+      published_at:$("newsPublished").checked?new Date().toISOString():null
+    };
+    const result=id
+      ?await supabase.from("news").update(payload).eq("id",id)
+      :await supabase.from("news").insert({...payload,created_by:currentUser.id});
+    if(result.error)throw result.error;
+    if(file&&old?.cover_path)await deleteStoredImage(old.cover_path);
+    resetForm("newsForm");showNotice("adminNotice","Berita berhasil disimpan.","success");
+    await loadAdminLists();await loadPublicContent();
+  }catch(error){showNotice("adminNotice","Gagal menyimpan berita: "+error.message,"error");}
+});
+
+/* SIMPAN PENGUMUMAN */
+$("announcementForm").addEventListener("submit",async event=>{
+  event.preventDefault();
+  if(!currentAdmin)return;
+  const id=$("announcementId").value;
+  const payload={
+    title:$("announcementTitle").value.trim(),
+    content:$("announcementContent").value.trim(),
+    is_published:$("announcementPublished").checked
+  };
+  const result=id
+    ?await supabase.from("announcements").update(payload).eq("id",id)
+    :await supabase.from("announcements").insert({...payload,created_by:currentUser.id});
+  if(result.error){showNotice("adminNotice","Gagal menyimpan pengumuman: "+result.error.message,"error");return;}
+  resetForm("announcementForm");showNotice("adminNotice","Pengumuman berhasil disimpan.","success");
+  await loadAdminLists();await loadPublicContent();
+});
+
+/* SIMPAN GURU / STAF */
+$("staffForm").addEventListener("submit",async event=>{
+  event.preventDefault();
+  if(!currentAdmin)return;
+  try{
+    const id=$("staffId").value;
+    const old=staffCache.find(x=>x.id===id);
+    const file=$("staffPhoto").files[0];
+    let photo_path=old?.photo_path||null;
+    if(file)photo_path=await uploadImage(file,"guru");
+    const payload={
+      full_name:$("staffName").value.trim(),
+      position:$("staffPosition").value.trim(),
+      bio:$("staffBio").value.trim(),
+      photo_path,is_published:$("staffPublished").checked
+    };
+    const result=id
+      ?await supabase.from("staff").update(payload).eq("id",id)
+      :await supabase.from("staff").insert(payload);
+    if(result.error)throw result.error;
+    if(file&&old?.photo_path)await deleteStoredImage(old.photo_path);
+    resetForm("staffForm");showNotice("adminNotice","Data guru/staf berhasil disimpan.","success");
+    await loadAdminLists();await loadPublicContent();
+  }catch(error){showNotice("adminNotice","Gagal menyimpan data guru: "+error.message,"error");}
+});
+
+/* SIMPAN GALERI */
+$("galleryForm").addEventListener("submit",async event=>{
+  event.preventDefault();
+  if(!currentAdmin)return;
+  try{
+    const id=$("galleryId").value;
+    const old=galleryCache.find(x=>x.id===id);
+    const file=$("galleryImage").files[0];
+    if(!id&&!file)throw new Error("Pilih foto kegiatan terlebih dahulu.");
+    let image_path=old?.image_path||null;
+    if(file)image_path=await uploadImage(file,"galeri");
+    const payload={
+      title:$("galleryTitle").value.trim(),
+      description:$("galleryDescription").value.trim(),
+      image_path,is_published:$("galleryPublished").checked
+    };
+    const result=id
+      ?await supabase.from("gallery").update(payload).eq("id",id)
+      :await supabase.from("gallery").insert({...payload,created_by:currentUser.id});
+    if(result.error)throw result.error;
+    if(file&&old?.image_path)await deleteStoredImage(old.image_path);
+    resetForm("galleryForm");showNotice("adminNotice","Dokumentasi berhasil disimpan.","success");
+    await loadAdminLists();await loadPublicContent();
+  }catch(error){showNotice("adminNotice","Gagal menyimpan dokumentasi: "+error.message,"error");}
+});
+
+/* TOMBOL KEMBALI KE ATAS */
+const topButton=$("topButton");
+window.addEventListener("scroll",()=>{
+  topButton.style.display=window.scrollY>300?"block":"none";
+});
+topButton.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+/* TAMPILKAN AREA ADMIN SAAT MENU ADMIN DIKLIK */
+$("adminMenuLink").addEventListener("click",async()=>{
+  $("adminArea").style.display="block";
+  await checkAdmin();
+});
+
+/* MULAI APLIKASI */
+await refreshVisitor();
+await checkAdmin();
+await loadPublicContent();
 </script>
 
 </body>
 </html>
-```
