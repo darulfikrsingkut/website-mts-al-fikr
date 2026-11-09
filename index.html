@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -80,17 +81,24 @@ header::after{
 
 .logo{
   flex-shrink:0;
-  width:72px;
-  height:72px;
+  width:78px;
+  height:78px;
   border:3px solid var(--emas);
   border-radius:50%;
-  background:linear-gradient(145deg,#fff,#eaf5ed);
-  display:grid;
-  place-items:center;
-  color:var(--hijau);
-  font-size:23px;
-  font-weight:800;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:5px;
   box-shadow:0 5px 15px rgba(0,0,0,.18);
+}
+
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
 }
 
 .header-text{
@@ -533,13 +541,12 @@ footer strong{
   }
 
   .logo{
-    width:59px;
-    height:59px;
-    font-size:19px;
+    width:65px;
+    height:65px;
   }
 
   .header-text h2{
-    font-size:17px;
+    font-size:16px;
   }
 
   .header-text p{
@@ -628,17 +635,19 @@ footer strong{
 <!-- HEADER -->
 
 <header>
+
   <div class="logo">
-  <img
-    src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png"
-    alt="Logo MTs Al-Fikr Cianjur Singkut"
-  >
-</div>
+    <img
+      src="https://website-darul-fikr-singkut.pages.dev/icon-mts.png.png"
+      alt="Logo MTs Al-Fikr Cianjur Singkut"
+    >
+  </div>
 
   <div class="header-text">
     <h2>MTs AL-FIKR CIANJUR SINGKUT</h2>
     <p>CIANJUR SINGKUT · KABUPATEN SAROLANGUN</p>
   </div>
+
 </header>
 
 <!-- NAVIGASI -->
@@ -658,6 +667,7 @@ footer strong{
 
 <div class="hero" id="beranda">
   <div class="hero-content">
+
     <small>SELAMAT DATANG DI WEBSITE RESMI</small>
 
     <h1>MTs Al-Fikr Cianjur Singkut</h1>
@@ -671,6 +681,7 @@ footer strong{
       <a class="btn" href="#profil">Jelajahi Madrasah</a>
       <a class="btn btn-outline" href="#ppdb">Informasi PPDB</a>
     </div>
+
   </div>
 </div>
 
@@ -952,3 +963,4 @@ function kembaliKeAtas(){
 
 </body>
 </html>
+```
