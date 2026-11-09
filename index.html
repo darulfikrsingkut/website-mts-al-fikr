@@ -1,117 +1,949 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Website resmi MTs Al-Fikr Cianjur Singkut, Kabupaten Sarolangun. Membangun generasi berilmu, beriman, dan berakhlakul karimah.">
+<meta name="theme-color" content="#075638">
+
 <title>MTs Al-Fikr Cianjur Singkut</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;color:#26352d;background:#f7faf8;line-height:1.6}
-header{background:#075c3b;color:white;padding:18px 7%;display:flex;align-items:center;gap:15px}
-.logo{width:65px;height:65px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#075c3b;font-weight:bold}
-header h2{font-size:20px}
-header p{font-size:13px;color:#e4eadf}
-nav{background:#064a31;padding:13px 7%;display:flex;gap:24px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-.hero{padding:90px 8%;background:linear-gradient(120deg,#075c3b,#168653);color:white}
-.hero small{color:#f4d78b;font-weight:bold;letter-spacing:2px}
-.hero h1{font-size:42px;max-width:650px;line-height:1.2;margin:15px 0}
-.hero p{max-width:600px;margin-bottom:25px}
-.btn{display:inline-block;background:#e7bd59;color:#193b2a;padding:12px 23px;border-radius:7px;text-decoration:none;font-weight:bold}
-section{padding:55px 7%}
-.section-title{text-align:center;margin-bottom:30px}
-.section-title h2{color:#075c3b;font-size:28px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:white;padding:25px;border-radius:12px;box-shadow:0 4px 18px #0000000c;border-bottom:3px solid #d6b34f}
-.card h3{color:#075c3b;margin-bottom:10px}
-.about{background:#eaf4ee}
-footer{background:#064a31;color:white;text-align:center;padding:28px}
-@media(max-width:600px){
-header h2{font-size:16px}
-nav{gap:13px}
-.hero{padding:65px 7%}
-.hero h1{font-size:32px}
+:root{
+  --hijau:#075638;
+  --hijau-tua:#043d29;
+  --hijau-muda:#138451;
+  --emas:#d8b451;
+  --emas-muda:#f3dfa0;
+  --putih:#ffffff;
+  --teks:#26382f;
+  --abu:#64746b;
+  --latar:#f5f9f6;
+  --garis:#e3ece5;
+  --bayangan:0 10px 30px rgba(0,50,30,.09);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:85px;
+}
+
+body{
+  font-family:'Poppins',Arial,sans-serif;
+  color:var(--teks);
+  background:var(--latar);
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* HEADER */
+
+header{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 90% 20%,rgba(255,255,255,.10),transparent 25%),
+    linear-gradient(115deg,var(--hijau-tua),var(--hijau),#087044);
+  color:white;
+  padding:20px 7%;
+  display:flex;
+  align-items:center;
+  gap:17px;
+  border-bottom:4px solid var(--emas);
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  right:8%;
+  top:-145px;
+  border:1px solid rgba(255,255,255,.13);
+  transform:rotate(45deg);
+  pointer-events:none;
+}
+
+.logo{
+  flex-shrink:0;
+  width:72px;
+  height:72px;
+  border:3px solid var(--emas);
+  border-radius:50%;
+  background:linear-gradient(145deg,#fff,#eaf5ed);
+  display:grid;
+  place-items:center;
+  color:var(--hijau);
+  font-size:23px;
+  font-weight:800;
+  box-shadow:0 5px 15px rgba(0,0,0,.18);
+}
+
+.header-text{
+  position:relative;
+  z-index:1;
+}
+
+.header-text h2{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.5px;
+  line-height:1.4;
+}
+
+.header-text p{
+  font-size:12px;
+  color:var(--emas-muda);
+  letter-spacing:1.2px;
+  font-weight:500;
+}
+
+/* NAVIGASI */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(4,61,41,.97);
+  backdrop-filter:blur(10px);
+  padding:0 7%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  flex-wrap:wrap;
+  box-shadow:0 4px 15px rgba(0,0,0,.12);
+}
+
+nav a{
+  color:white;
+  padding:15px 13px;
+  font-size:12px;
+  font-weight:600;
+  transition:.25s;
+  border-bottom:3px solid transparent;
+}
+
+nav a:hover{
+  color:var(--emas-muda);
+  background:rgba(255,255,255,.07);
+  border-bottom-color:var(--emas);
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:440px;
+  padding:90px 8%;
+  color:white;
+  background:
+    radial-gradient(circle at 85% 30%,rgba(231,190,89,.18),transparent 25%),
+    radial-gradient(circle at 10% 90%,rgba(255,255,255,.09),transparent 28%),
+    linear-gradient(120deg,#043d29,#087447 60%,#15915b);
+}
+
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  border:1px solid rgba(255,255,255,.12);
+  transform:rotate(45deg);
+  pointer-events:none;
+}
+
+.hero::before{
+  right:-90px;
+  top:30px;
+}
+
+.hero::after{
+  right:70px;
+  bottom:-190px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+}
+
+.hero small{
+  display:inline-block;
+  color:var(--emas-muda);
+  font-weight:700;
+  letter-spacing:2px;
+  font-size:12px;
+  padding:7px 13px;
+  border:1px solid rgba(243,223,160,.45);
+  border-radius:30px;
+  background:rgba(255,255,255,.07);
+}
+
+.hero h1{
+  font-size:43px;
+  max-width:700px;
+  line-height:1.25;
+  margin:22px 0 15px;
+  font-weight:800;
+  text-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.hero p{
+  max-width:620px;
+  color:#eef8f0;
+  font-size:15px;
+  margin-bottom:28px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#f1d17c,#d5ad45);
+  color:#263b2d;
+  padding:12px 23px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:700;
+  box-shadow:0 5px 15px rgba(0,0,0,.13);
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.btn-outline{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:none;
+}
+
+.btn-outline:hover{
+  background:rgba(255,255,255,.12);
+}
+
+/* INFORMASI SINGKAT */
+
+.highlight{
+  position:relative;
+  z-index:5;
+  max-width:1100px;
+  margin:-35px auto 0;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.highlight-item{
+  background:white;
+  padding:20px 15px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:var(--bayangan);
+  border-bottom:3px solid var(--emas);
+}
+
+.highlight-item strong{
+  display:block;
+  color:var(--hijau);
+  font-size:23px;
+  font-weight:800;
+}
+
+.highlight-item span{
+  color:var(--abu);
+  font-size:12px;
+  font-weight:600;
+}
+
+/* SECTION UMUM */
+
+section{
+  padding:65px 7%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title small{
+  color:#a27b23;
+  letter-spacing:2px;
+  font-size:11px;
+  font-weight:700;
+}
+
+.section-title h2{
+  color:var(--hijau);
+  font-size:29px;
+  font-weight:800;
+  margin:5px 0;
+}
+
+.section-title p{
+  color:var(--abu);
+  font-size:13px;
+}
+
+.about{
+  background:
+    radial-gradient(circle at 5% 10%,rgba(216,180,81,.08),transparent 25%),
+    linear-gradient(135deg,#edf6ef,#f8fbf8);
+}
+
+/* KARTU */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.card{
+  position:relative;
+  background:white;
+  padding:27px;
+  border-radius:13px;
+  box-shadow:var(--bayangan);
+  border:1px solid var(--garis);
+  border-bottom:4px solid var(--emas);
+  transition:transform .25s,box-shadow .25s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,50,30,.13);
+}
+
+.card h3{
+  color:var(--hijau);
+  font-size:17px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#53665b;
+  font-size:13px;
+  line-height:1.9;
+  margin-bottom:7px;
+}
+
+.card-icon{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:linear-gradient(135deg,#e2f1e6,#fff4d7);
+  color:var(--hijau);
+  font-size:21px;
+  margin-bottom:16px;
+}
+
+/* PROFIL */
+
+.profile-card{
+  max-width:950px;
+  margin:auto;
+}
+
+.profile-card h3{
+  font-size:20px;
+}
+
+.profile-label{
+  display:inline-block;
+  margin-top:14px;
+  padding:5px 12px;
+  color:#725719;
+  background:#fff5d9;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:700;
+}
+
+/* BERITA */
+
+.news-placeholder{
+  text-align:center;
+  padding:35px 20px;
+}
+
+.news-placeholder .card-icon{
+  margin:0 auto 15px;
+}
+
+/* GALERI */
+
+.gallery-placeholder{
+  text-align:center;
+  padding:35px 20px;
+  border:2px dashed #c9d9ce;
+  border-radius:13px;
+  background:rgba(255,255,255,.7);
+}
+
+.gallery-placeholder .card-icon{
+  margin:0 auto 15px;
+}
+
+/* PPDB */
+
+.ppdb-box{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  background:linear-gradient(120deg,#075638,#11804d);
+  color:white;
+  padding:40px 25px;
+  border-radius:17px;
+  border:2px solid var(--emas);
+  box-shadow:var(--bayangan);
+}
+
+.ppdb-box h3{
+  font-size:23px;
+  margin-bottom:10px;
+}
+
+.ppdb-box p{
+  font-size:13px;
+  color:#e9f4ec;
+  margin-bottom:20px;
+}
+
+/* KONTAK */
+
+.contact-card{
+  max-width:850px;
+  margin:auto;
+}
+
+.contact-card p{
+  padding:7px 0;
+}
+
+/* LINK YAYASAN */
+
+.foundation-link{
+  text-align:center;
+  padding:25px 15px;
+  background:#fff9e9;
+  border-top:1px solid #efdfb2;
+}
+
+.foundation-link p{
+  color:#675b3c;
+  font-size:12px;
+  margin-bottom:8px;
+}
+
+.foundation-link a{
+  color:var(--hijau);
+  font-weight:700;
+  font-size:13px;
+}
+
+.foundation-link a:hover{
+  color:#a27b23;
+}
+
+/* FOOTER */
+
+footer{
+  background:
+    radial-gradient(circle at 90% 0%,rgba(255,255,255,.08),transparent 25%),
+    linear-gradient(120deg,#043d29,#075638);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  border-top:4px solid var(--emas);
+}
+
+footer p{
+  font-size:12px;
+  margin:4px 0;
+  color:#e1eee5;
+}
+
+footer strong{
+  color:var(--emas-muda);
+}
+
+/* TOMBOL KEMBALI KE ATAS */
+
+#topButton{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:43px;
+  height:43px;
+  border:0;
+  border-radius:50%;
+  background:var(--emas);
+  color:var(--hijau-tua);
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 4px 15px rgba(0,0,0,.2);
+  display:none;
+  z-index:999;
+}
+
+#topButton:hover{
+  background:#f0d27d;
+  transform:translateY(-3px);
+}
+
+/* RESPONSIVE HP */
+
+@media(max-width:700px){
+
+  header{
+    padding:16px 5%;
+    gap:12px;
+  }
+
+  .logo{
+    width:59px;
+    height:59px;
+    font-size:19px;
+  }
+
+  .header-text h2{
+    font-size:17px;
+  }
+
+  .header-text p{
+    font-size:10px;
+    letter-spacing:.5px;
+  }
+
+  nav{
+    justify-content:flex-start;
+    gap:0;
+    padding:5px 3%;
+  }
+
+  nav a{
+    padding:10px 9px;
+    font-size:11px;
+  }
+
+  .hero{
+    min-height:390px;
+    padding:65px 7%;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:13px;
+  }
+
+  .highlight{
+    grid-template-columns:1fr;
+    margin:-20px 15px 0;
+    padding:0;
+    gap:10px;
+  }
+
+  .highlight-item{
+    padding:13px;
+  }
+
+  .highlight-item strong{
+    font-size:20px;
+  }
+
+  section{
+    padding:48px 6%;
+  }
+
+  .section-title h2{
+    font-size:24px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:22px;
+  }
+
+  .ppdb-box h3{
+    font-size:20px;
+  }
+}
+
+@media(min-width:701px) and (max-width:950px){
+  nav{
+    gap:0;
+  }
+
+  nav a{
+    padding:13px 9px;
+  }
+
+  .hero h1{
+    font-size:37px;
+  }
 }
 </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
+
 <header>
-<div class="logo">AF</div>
-<div>
-<h2>MTs AL-FIKR</h2>
-<p>CIANJUR SINGKUT · SAROLANGUN</p>
-</div>
+  <div class="logo">AF</div>
+
+  <div class="header-text">
+    <h2>MTs AL-FIKR CIANJUR SINGKUT</h2>
+    <p>CIANJUR SINGKUT · KABUPATEN SAROLANGUN</p>
+  </div>
 </header>
 
+<!-- NAVIGASI -->
+
 <nav>
-<a href="#beranda">Beranda</a>
-<a href="#profil">Profil</a>
-<a href="#guru">Guru</a>
-<a href="#berita">Berita</a>
-<a href="#pengumuman">Pengumuman</a>
-<a href="#galeri">Galeri</a>
-<a href="#ppdb">PPDB</a>
-<a href="#kontak">Kontak</a>
+  <a href="#beranda">Beranda</a>
+  <a href="#profil">Profil</a>
+  <a href="#guru">Guru</a>
+  <a href="#berita">Berita</a>
+  <a href="#pengumuman">Pengumuman</a>
+  <a href="#galeri">Galeri</a>
+  <a href="#ppdb">PPDB</a>
+  <a href="#kontak">Kontak</a>
 </nav>
 
+<!-- BERANDA -->
+
 <div class="hero" id="beranda">
-<small>SELAMAT DATANG DI WEBSITE RESMI</small>
-<h1>MTs Al-Fikr Cianjur Singkut</h1>
-<p>Membangun generasi berilmu, beriman, berakhlakul karimah, dan siap menghadapi masa depan.</p>
-<a class="btn" href="#profil">Jelajahi Madrasah</a>
+  <div class="hero-content">
+    <small>SELAMAT DATANG DI WEBSITE RESMI</small>
+
+    <h1>MTs Al-Fikr Cianjur Singkut</h1>
+
+    <p>
+      Membangun generasi berilmu, beriman, berakhlakul karimah,
+      dan siap menghadapi masa depan.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn" href="#profil">Jelajahi Madrasah</a>
+      <a class="btn btn-outline" href="#ppdb">Informasi PPDB</a>
+    </div>
+  </div>
 </div>
+
+<!-- INFORMASI SINGKAT -->
+
+<div class="highlight">
+
+  <div class="highlight-item">
+    <strong>2011</strong>
+    <span>Tahun Berdiri</span>
+  </div>
+
+  <div class="highlight-item">
+    <strong>MTs</strong>
+    <span>Jenjang Pendidikan</span>
+  </div>
+
+  <div class="highlight-item">
+    <strong>Darul Fikr</strong>
+    <span>Di bawah Naungan Yayasan</span>
+  </div>
+
+</div>
+
+<!-- PROFIL -->
 
 <section class="about" id="profil">
-<div class="section-title">
-<h2>Profil Madrasah</h2>
-<p>Mengenal lebih dekat MTs Al-Fikr Cianjur Singkut</p>
-</div>
-<div class="card">
-<h3>MTs Al-Fikr Cianjur Singkut</h3>
-<p>Madrasah Tsanawiyah yang berada di bawah naungan Yayasan Darul Fikr Singkut. Berdiri sejak tahun 2011.</p>
-<p>Informasi sejarah, visi, misi, dan identitas madrasah akan dilengkapi oleh pengelola.</p>
-</div>
+
+  <div class="section-title">
+    <small>MENGENAL MADRASAH</small>
+    <h2>Profil Madrasah</h2>
+    <p>Mengenal lebih dekat MTs Al-Fikr Cianjur Singkut</p>
+  </div>
+
+  <div class="card profile-card">
+
+    <div class="card-icon">🏫</div>
+
+    <h3>MTs Al-Fikr Cianjur Singkut</h3>
+
+    <p>
+      MTs Al-Fikr Cianjur Singkut merupakan lembaga pendidikan
+      tingkat Madrasah Tsanawiyah yang berada di bawah naungan
+      Yayasan Darul Fikr Singkut.
+    </p>
+
+    <p>
+      Madrasah ini berdiri sejak tahun 2011 sebagai bagian dari
+      upaya menghadirkan pendidikan yang memadukan ilmu pengetahuan,
+      nilai-nilai keislaman, pembinaan karakter, dan akhlakul karimah.
+    </p>
+
+    <p>
+      Informasi lebih lengkap mengenai sejarah, visi, misi,
+      tujuan, dan identitas madrasah akan dilengkapi oleh pengelola.
+    </p>
+
+    <span class="profile-label">Berdiri Tahun 2011</span>
+
+  </div>
+
 </section>
+
+<!-- GURU -->
 
 <section id="guru">
-<div class="section-title"><h2>Guru dan Tenaga Kependidikan</h2><p>Mengenal tenaga pendidik madrasah</p></div>
-<div class="cards">
-<div class="card"><h3>Tenaga Pendidik</h3><p>Informasi guru akan ditampilkan di sini.</p></div>
-<div class="card"><h3>Tenaga Kependidikan</h3><p>Informasi staf madrasah akan ditampilkan di sini.</p></div>
-</div>
+
+  <div class="section-title">
+    <small>SUMBER DAYA MANUSIA</small>
+    <h2>Guru dan Tenaga Kependidikan</h2>
+    <p>Mengenal tenaga pendidik dan kependidikan madrasah</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">👨‍🏫</div>
+      <h3>Tenaga Pendidik</h3>
+      <p>
+        Informasi nama, foto, mata pelajaran, dan profil guru
+        akan ditampilkan di bagian ini.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📋</div>
+      <h3>Tenaga Kependidikan</h3>
+      <p>
+        Informasi staf tata usaha dan tenaga kependidikan
+        madrasah akan ditampilkan di bagian ini.
+      </p>
+    </div>
+
+  </div>
+
 </section>
+
+<!-- BERITA -->
 
 <section class="about" id="berita">
-<div class="section-title"><h2>Berita dan Kegiatan</h2><p>Informasi terbaru kegiatan madrasah</p></div>
-<div class="card"><h3>Berita Madrasah</h3><p>Berita dan dokumentasi kegiatan akan ditampilkan di sini.</p></div>
+
+  <div class="section-title">
+    <small>INFORMASI TERKINI</small>
+    <h2>Berita dan Kegiatan</h2>
+    <p>Informasi terbaru seputar aktivitas MTs Al-Fikr</p>
+  </div>
+
+  <div class="card news-placeholder">
+
+    <div class="card-icon">📰</div>
+
+    <h3>Berita Madrasah</h3>
+
+    <p>
+      Berita, artikel, prestasi siswa, kegiatan pembelajaran,
+      dan dokumentasi aktivitas madrasah akan ditampilkan
+      di bagian ini.
+    </p>
+
+    <span class="profile-label">Konten berita akan diperbarui</span>
+
+  </div>
+
 </section>
+
+<!-- PENGUMUMAN -->
 
 <section id="pengumuman">
-<div class="section-title"><h2>Pengumuman</h2></div>
-<div class="card"><p>Belum ada pengumuman terbaru.</p></div>
+
+  <div class="section-title">
+    <small>INFORMASI PENTING</small>
+    <h2>Pengumuman</h2>
+    <p>Informasi dan pemberitahuan resmi madrasah</p>
+  </div>
+
+  <div class="card">
+
+    <div class="card-icon">📢</div>
+
+    <h3>Pengumuman Madrasah</h3>
+
+    <p>
+      Belum ada pengumuman terbaru.
+      Informasi resmi madrasah akan disampaikan melalui bagian ini.
+    </p>
+
+  </div>
+
 </section>
+
+<!-- GALERI -->
 
 <section class="about" id="galeri">
-<div class="section-title"><h2>Galeri Madrasah</h2><p>Dokumentasi kegiatan MTs Al-Fikr</p></div>
-<div class="card"><p>Foto kegiatan madrasah akan ditampilkan di sini.</p></div>
+
+  <div class="section-title">
+    <small>DOKUMENTASI</small>
+    <h2>Galeri Madrasah</h2>
+    <p>Mengabadikan kegiatan dan aktivitas MTs Al-Fikr</p>
+  </div>
+
+  <div class="gallery-placeholder">
+
+    <div class="card-icon">📷</div>
+
+    <h3>Dokumentasi Kegiatan</h3>
+
+    <p>
+      Foto kegiatan belajar mengajar, kegiatan keagamaan,
+      perlombaan, peringatan hari besar Islam, dan aktivitas
+      madrasah lainnya akan ditampilkan di sini.
+    </p>
+
+  </div>
+
 </section>
+
+<!-- PPDB -->
 
 <section id="ppdb">
-<div class="section-title"><h2>Penerimaan Peserta Didik Baru</h2></div>
-<div class="card"><p>Informasi pendaftaran siswa baru akan segera tersedia.</p></div>
+
+  <div class="section-title">
+    <small>PENERIMAAN SISWA BARU</small>
+    <h2>Penerimaan Peserta Didik Baru</h2>
+    <p>Bergabung dan tumbuh bersama MTs Al-Fikr Cianjur Singkut</p>
+  </div>
+
+  <div class="ppdb-box">
+
+    <h3>Informasi PPDB MTs Al-Fikr</h3>
+
+    <p>
+      Informasi persyaratan, jadwal pendaftaran,
+      prosedur penerimaan, dan ketentuan lainnya
+      akan diumumkan melalui halaman ini.
+    </p>
+
+    <a class="btn" href="#kontak">Hubungi Madrasah</a>
+
+  </div>
+
 </section>
+
+<!-- KONTAK -->
 
 <section class="about" id="kontak">
-<div class="section-title"><h2>Hubungi Kami</h2></div>
-<div class="card"><p>MTs Al-Fikr Cianjur Singkut</p><p>Alamat: Cianjur Singkut, Kabupaten Sarolangun</p><p>Kontak madrasah akan dilengkapi kemudian.</p></div>
+
+  <div class="section-title">
+    <small>INFORMASI DAN LAYANAN</small>
+    <h2>Hubungi Kami</h2>
+    <p>Informasi lebih lanjut mengenai MTs Al-Fikr Cianjur Singkut</p>
+  </div>
+
+  <div class="card contact-card">
+
+    <div class="card-icon">📍</div>
+
+    <h3>MTs Al-Fikr Cianjur Singkut</h3>
+
+    <p><strong>Alamat:</strong> Cianjur Singkut, Kabupaten Sarolangun</p>
+
+    <p><strong>Yayasan:</strong> Yayasan Darul Fikr Singkut</p>
+
+    <p><strong>Informasi:</strong> Kontak madrasah akan dilengkapi kemudian.</p>
+
+  </div>
+
 </section>
 
+<!-- TAUTAN YAYASAN -->
+
+<div class="foundation-link">
+
+  <p>MTs Al-Fikr Cianjur Singkut merupakan bagian dari</p>
+
+  <a href="https://website-darul-fikr-singkut.pages.dev" target="_blank" rel="noopener">
+    YAYASAN DARUL FIKR SINGKUT
+  </a>
+
+</div>
+
+<!-- FOOTER -->
+
 <footer>
-<p>© 2026 MTs Al-Fikr Cianjur Singkut</p>
-<p>Bagian dari Yayasan Darul Fikr Singkut</p>
+
+  <p><strong>MTs AL-FIKR CIANJUR SINGKUT</strong></p>
+
+  <p>Membangun Generasi Berilmu, Beriman, dan Berakhlakul Karimah</p>
+
+  <p>© 2026 MTs Al-Fikr Cianjur Singkut</p>
+
+  <p>Bagian dari Yayasan Darul Fikr Singkut</p>
+
 </footer>
+
+<!-- TOMBOL KEMBALI KE ATAS -->
+
+<button id="topButton" onclick="kembaliKeAtas()" aria-label="Kembali ke atas">
+  ↑
+</button>
+
+<script>
+const topButton = document.getElementById("topButton");
+
+window.addEventListener("scroll", function(){
+  if(window.scrollY > 300){
+    topButton.style.display = "block";
+  }else{
+    topButton.style.display = "none";
+  }
+});
+
+function kembaliKeAtas(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+</script>
 
 </body>
 </html>
